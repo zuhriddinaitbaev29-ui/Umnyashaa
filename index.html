@@ -1,832 +1,185 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth scroll-pt-20 motion-reduce:scroll-auto">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Orbita — проект для IT Demo Day</title>
-  <meta name="description" content="Современный веб-проект, объединяющий дизайн, технологии и интерактивный пользовательский опыт. HTML5 и Tailwind CSS.">
-  <meta name="theme-color" content="#0a0a0a">
-  <meta name="color-scheme" content="dark">
-  <meta property="og:title" content="Orbita — проект для IT Demo Day">
-  <meta property="og:description" content="Создавай. Развивайся. Показывай результат.">
-  <meta property="og:type" content="website">
+  <title>Умняша — образовательная страница для детей</title>
+  <meta name="description" content="Образовательная страница для детей 5–8 лет: буквы, цифры, цвета и фигуры, мир вокруг.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='15' height='15' rx='4' fill='%238b5cf6'/%3E%3Crect x='17' width='15' height='15' rx='4' fill='%23fbbf24'/%3E%3Crect y='17' width='15' height='15' rx='4' fill='%2310b981'/%3E%3Crect x='17' y='17' width='15' height='15' rx='4' fill='%230ea5e9'/%3E%3C/svg%3E">
 
-  <!-- Иконка вкладки (встроена прямо в файл) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ccircle cx='16' cy='16' r='6.5' fill='none' stroke='white' stroke-width='2.5'/%3E%3Ccircle cx='24' cy='9' r='2' fill='white'/%3E%3C/svg%3E">
-
-  <!-- Шрифт Onest (поддерживает кириллицу) -->
+  <!-- Шрифты: Unbounded для заголовков, Onest для текста -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Onest', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
 </head>
 
-<body class="bg-[#0a0a0a] font-sans text-white antialiased selection:bg-violet-500/30">
+<body class="bg-white font-['Onest',sans-serif] text-slate-900 antialiased">
+  <a href="#main" class="sr-only rounded-lg bg-slate-900 px-4 py-2 text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-4">Перейти к содержанию</a>
 
-  <a href="#main" class="sr-only rounded-lg bg-white px-4 py-2 text-sm font-semibold text-black focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]">Перейти к содержанию</a>
-
-  <!-- ============================== HEADER ============================== -->
-  <header class="sticky top-0 z-50 border-b border-[#262626] bg-[#0a0a0a]/70 backdrop-blur-xl">
-    <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-6 px-5 sm:px-6 lg:px-8 2xl:max-w-[88rem]">
-
-      <a href="#home" class="flex items-center gap-2.5 rounded-lg text-base font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]">
-        <span class="grid size-8 place-items-center rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 shadow-lg shadow-violet-600/30">
-          <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="5.5"/><circle cx="18.5" cy="5.5" r="1.6" fill="currentColor" stroke="none"/></svg>
-        </span>
-        Orbita
+  <header class="border-b border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-col gap-3 py-4 md:flex-row md:items-center md:justify-between">
+      <a href="index.html" class="flex w-fit items-center gap-3 rounded-lg font-['Unbounded',sans-serif] text-lg font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+        <span class="grid size-9 shrink-0 grid-cols-2 gap-0.5" aria-hidden="true"><span class="rounded-md bg-violet-500"></span><span class="rounded-md bg-amber-400"></span><span class="rounded-md bg-emerald-500"></span><span class="rounded-md bg-sky-500"></span></span>
+        Умняша
       </a>
-
-      <nav aria-label="Основная навигация" class="hidden lg:block">
-        <ul class="flex items-center gap-1">
-          <li><a href="#home" data-nav class="rounded-lg bg-white/5 px-3 py-2 text-sm font-medium text-white transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">Главная</a></li>
-          <li><a href="#about" data-nav class="rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">О проекте</a></li>
-          <li><a href="#features" data-nav class="rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">Возможности</a></li>
-          <li><a href="#process" data-nav class="rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">Процесс</a></li>
-          <li><a href="#tech" data-nav class="rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">Технологии</a></li>
-          <li><a href="#contacts" data-nav class="rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">Контакты</a></li>
+      <nav aria-label="Разделы сайта">
+        <ul class="-mx-1 flex flex-wrap gap-1">
+          <li><a href="index.html" aria-current="page" class="block rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Главная</a></li>
+          <li><a href="letters.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Буквы</a></li>
+          <li><a href="numbers.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Цифры</a></li>
+          <li><a href="colors.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Цвета и фигуры</a></li>
+          <li><a href="world.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Мир вокруг</a></li>
         </ul>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="#demo" class="hidden items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-violet-600/20 transition duration-300 hover:shadow-violet-600/40 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a] sm:inline-flex">Посмотреть проект</a>
-
-        <button id="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" class="grid size-10 place-items-center rounded-xl border border-[#262626] text-zinc-300 transition hover:border-zinc-600 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 lg:hidden">
-          <svg id="icon-open" viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-          <svg id="icon-close" viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Мобильное меню -->
-    <div id="mobile-menu" class="hidden border-t border-[#262626] lg:hidden">
-      <nav aria-label="Мобильная навигация" class="mx-auto w-full max-w-7xl px-5 py-4 sm:px-6">
-        <ul class="flex flex-col gap-1">
-          <li><a href="#home" data-nav class="block rounded-xl bg-white/5 px-4 py-3 text-base font-medium text-white transition hover:text-white">Главная</a></li>
-          <li><a href="#about" data-nav class="block rounded-xl px-4 py-3 text-base font-medium text-zinc-400 transition hover:text-white">О проекте</a></li>
-          <li><a href="#features" data-nav class="block rounded-xl px-4 py-3 text-base font-medium text-zinc-400 transition hover:text-white">Возможности</a></li>
-          <li><a href="#process" data-nav class="block rounded-xl px-4 py-3 text-base font-medium text-zinc-400 transition hover:text-white">Процесс</a></li>
-          <li><a href="#tech" data-nav class="block rounded-xl px-4 py-3 text-base font-medium text-zinc-400 transition hover:text-white">Технологии</a></li>
-          <li><a href="#contacts" data-nav class="block rounded-xl px-4 py-3 text-base font-medium text-zinc-400 transition hover:text-white">Контакты</a></li>
-        </ul>
-        <a href="#demo" class="mt-4 flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3.5 text-sm font-semibold text-white">Посмотреть проект</a>
       </nav>
     </div>
   </header>
 
-  <main id="main" tabindex="-1" class="outline-none">
-
-    <!-- ============================== HERO ============================== -->
-    <section id="home" class="relative overflow-hidden">
-      <div aria-hidden="true" class="pointer-events-none absolute inset-0">
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_30%,transparent_100%)]"></div>
-        <div class="absolute -top-56 left-1/2 h-[520px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-600/20 to-violet-600/20 blur-3xl"></div>
-      </div>
-
-      <div class="relative mx-auto grid w-full max-w-7xl items-center gap-16 px-5 pb-20 pt-16 sm:px-6 sm:pb-24 sm:pt-24 lg:px-8 xl:grid-cols-12 xl:gap-10 xl:pb-32 xl:pt-28 2xl:max-w-[88rem]">
-
-        <div class="xl:col-span-7">
-          <p data-reveal class="inline-flex translate-y-6 items-center gap-2 rounded-full border border-[#262626] bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-zinc-400 opacity-0 transition duration-700 ease-out motion-reduce:transition-none">
-            <span class="size-1.5 rounded-full bg-emerald-400"></span>
-            IT Demo Day 2026
-          </p>
-
-          <h1 data-reveal class="mt-6 translate-y-6 text-[2.6rem] font-semibold leading-[1.05] tracking-[-0.035em] opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none sm:text-6xl md:text-[4.25rem] xl:text-[4rem] 2xl:text-[4.5rem]">
-            <span class="block">Создавай.</span>
-            <span class="block">Развивайся.</span>
-            <span class="block">Показывай результат.</span>
-          </h1>
-
-          <p data-reveal class="mt-6 max-w-xl translate-y-6 text-lg leading-relaxed text-zinc-400 opacity-0 transition delay-200 duration-700 ease-out motion-reduce:transition-none sm:text-xl">
-            Современный веб-проект, объединяющий дизайн, технологии и интерактивный пользовательский опыт.
-          </p>
-
-          <div data-reveal class="mt-10 flex translate-y-6 flex-col gap-3 opacity-0 transition delay-300 duration-700 ease-out motion-reduce:transition-none sm:flex-row">
-            <a href="#demo" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-600/25 transition duration-300 hover:shadow-violet-600/40 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]">Посмотреть проект</a>
-            <a href="#about" class="inline-flex items-center justify-center rounded-xl border border-[#262626] bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:border-zinc-600 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]">Узнать больше</a>
+  <main id="main">
+    <section class="py-14 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <h1 class="font-['Unbounded',sans-serif] text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">Учимся легко и&nbsp;с&nbsp;интересом</h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl">Образовательная страница для детей 5–8 лет. Четыре красочных раздела: буквы, цифры, цвета и фигуры, мир вокруг.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="letters.html" class="rounded-full bg-slate-900 px-7 py-4 text-center text-base font-semibold text-white hover:bg-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Начать с букв</a>
+            <a href="#sections" class="rounded-full px-7 py-4 text-center text-base font-semibold text-slate-900 ring-1 ring-slate-300 hover:ring-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Все разделы</a>
           </div>
-
-          <p data-reveal class="mt-10 translate-y-6 text-sm text-zinc-500 opacity-0 transition delay-300 duration-700 ease-out motion-reduce:transition-none">Сделано на HTML5 и Tailwind CSS. Опубликовано на Vercel.</p>
         </div>
-
-        <!-- Макет панели проекта -->
-        <div data-reveal class="relative mx-auto w-full max-w-xl translate-y-6 opacity-0 transition delay-200 duration-700 ease-out motion-reduce:transition-none xl:col-span-5 xl:max-w-none">
-          <div aria-hidden="true" class="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-blue-600/25 via-violet-600/15 to-transparent blur-2xl"></div>
-
-          <div role="img" aria-label="Макет панели проекта: производительность 98 процентов, более 12 функций, статус Live" class="relative rounded-3xl border border-white/10 bg-white/[0.03] p-2 shadow-2xl shadow-black/60 backdrop-blur-xl">
-            <div class="rounded-[1.25rem] border border-[#262626] bg-[#0d0d0d] p-5 sm:p-6">
-
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <span class="grid size-9 place-items-center rounded-lg bg-gradient-to-br from-blue-500 to-violet-600">
-                    <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5.5"/><circle cx="18.5" cy="5.5" r="1.6" fill="currentColor" stroke="none"/></svg>
-                  </span>
-                  <div>
-                    <p class="text-xs text-zinc-500">Project</p>
-                    <p class="text-sm font-semibold">Orbita</p>
-                  </div>
-                </div>
-                <span class="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
-                  <span class="relative flex size-2">
-                    <span class="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75 motion-reduce:animate-none"></span>
-                    <span class="relative inline-flex size-2 rounded-full bg-emerald-400"></span>
-                  </span>
-                  Live
-                </span>
-              </div>
-
-              <div class="mt-6 grid grid-cols-2 gap-3">
-                <div class="rounded-2xl border border-[#262626] bg-[#111111] p-4">
-                  <div class="grid size-20 place-items-center rounded-full bg-[conic-gradient(#3b82f6_0deg,#8b5cf6_353deg,#262626_353deg)]">
-                    <div class="grid size-[68px] place-items-center rounded-full bg-[#111111]">
-                      <span class="text-xl font-semibold tracking-tight">98%</span>
-                    </div>
-                  </div>
-                  <p class="mt-3 text-sm text-zinc-400">Performance</p>
-                </div>
-                <div class="flex flex-col justify-between rounded-2xl border border-[#262626] bg-[#111111] p-4">
-                  <p class="text-4xl font-semibold tracking-tight">12+</p>
-                  <div>
-                    <p class="text-sm text-zinc-400">Features</p>
-                    <div class="mt-3 grid grid-cols-6 gap-1">
-                      <span class="h-1.5 rounded-full bg-blue-500"></span><span class="h-1.5 rounded-full bg-blue-500"></span><span class="h-1.5 rounded-full bg-indigo-500"></span>
-                      <span class="h-1.5 rounded-full bg-indigo-500"></span><span class="h-1.5 rounded-full bg-violet-500"></span><span class="h-1.5 rounded-full bg-violet-500"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-3 rounded-2xl border border-[#262626] bg-[#111111] p-4">
-                <div class="flex items-center justify-between text-sm">
-                  <span class="text-zinc-400">Activity</span>
-                  <span class="text-xs text-zinc-500">Last 14 days</span>
-                </div>
-                <div class="mt-4 flex h-24 items-end gap-1.5">
-                  <span class="h-[30%] flex-1 rounded-t bg-white/10"></span>
-                  <span class="h-[42%] flex-1 rounded-t bg-white/10"></span>
-                  <span class="h-[36%] flex-1 rounded-t bg-white/10"></span>
-                  <span class="h-[55%] flex-1 rounded-t bg-white/10"></span>
-                  <span class="h-[48%] flex-1 rounded-t bg-white/10"></span>
-                  <span class="h-[62%] flex-1 rounded-t bg-white/10"></span>
-                  <span class="h-[58%] flex-1 rounded-t bg-white/10"></span>
-                  <span class="h-[70%] flex-1 rounded-t bg-gradient-to-t from-blue-600/50 to-violet-500/60"></span>
-                  <span class="h-[64%] flex-1 rounded-t bg-gradient-to-t from-blue-600/50 to-violet-500/60"></span>
-                  <span class="h-[78%] flex-1 rounded-t bg-gradient-to-t from-blue-600/50 to-violet-500/60"></span>
-                  <span class="h-[72%] flex-1 rounded-t bg-gradient-to-t from-blue-600/50 to-violet-500/60"></span>
-                  <span class="h-[86%] flex-1 rounded-t bg-gradient-to-t from-blue-600/60 to-violet-500/70"></span>
-                  <span class="h-[80%] flex-1 rounded-t bg-gradient-to-t from-blue-600/60 to-violet-500/70"></span>
-                  <span class="h-full flex-1 rounded-t bg-gradient-to-t from-blue-500 to-violet-500"></span>
-                </div>
-              </div>
-
-              <ul class="mt-3 divide-y divide-[#262626] rounded-2xl border border-[#262626] bg-[#111111] text-sm">
-                <li class="flex items-center justify-between px-4 py-3"><span class="text-zinc-300">Responsive</span><span class="text-zinc-500">100%</span></li>
-                <li class="flex items-center justify-between px-4 py-3"><span class="text-zinc-300">Deploy</span><span class="text-emerald-400">Ready</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <div aria-hidden="true" class="absolute -bottom-6 -left-3 hidden items-center gap-3 rounded-2xl border border-white/10 bg-[#111111]/90 px-4 py-3 shadow-xl shadow-black/50 backdrop-blur-xl sm:flex xl:-left-10">
-            <span class="grid size-8 place-items-center rounded-full bg-emerald-500/15 text-emerald-400">
-              <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        <div class="grid grid-cols-2 gap-3">
+          <a href="letters.html" class="flex min-h-[150px] flex-col justify-between rounded-3xl bg-violet-100 p-5 hover:ring-2 hover:ring-slate-900 sm:min-h-[190px] sm:p-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+            <span class="font-['Unbounded',sans-serif] text-4xl font-semibold sm:text-5xl"><span class="text-red-600">А</span><span class="text-blue-600">Б</span><span class="text-blue-600">В</span></span>
+            <span class="text-base font-semibold">Буквы</span>
+          </a>
+          <a href="numbers.html" class="flex min-h-[150px] flex-col justify-between rounded-3xl bg-amber-300 p-5 hover:ring-2 hover:ring-slate-900 sm:min-h-[190px] sm:p-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+            <span class="font-['Unbounded',sans-serif] text-4xl font-semibold sm:text-5xl">1 2 3</span>
+            <span class="text-base font-semibold">Цифры</span>
+          </a>
+          <a href="colors.html" class="flex min-h-[150px] flex-col justify-between rounded-3xl bg-emerald-500 p-5 text-white hover:ring-2 hover:ring-slate-900 sm:min-h-[190px] sm:p-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+            <span class="flex items-end gap-2" aria-hidden="true">
+              <span class="size-9 rounded-full bg-white sm:size-11"></span>
+              <span class="size-9 bg-yellow-300 sm:size-11"></span>
+              <svg viewBox="0 0 100 100" class="size-9 sm:size-11"><polygon points="50,6 96,94 4,94" fill="#ede9fe"/></svg>
             </span>
-            <div>
-              <p class="text-sm font-medium">Deploy successful</p>
-              <p class="text-xs text-zinc-500">Vercel, production</p>
-            </div>
-          </div>
+            <span class="text-base font-semibold">Цвета и фигуры</span>
+          </a>
+          <a href="world.html" class="flex min-h-[150px] flex-col justify-between rounded-3xl bg-sky-500 p-5 text-white hover:ring-2 hover:ring-slate-900 sm:min-h-[190px] sm:p-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+            <span class="flex items-center gap-2" aria-hidden="true">
+              <span class="size-10 rounded-full bg-amber-300 sm:size-12"></span>
+              <span class="size-4 rounded-full bg-blue-700"></span>
+              <span class="size-6 rounded-full bg-orange-300"></span>
+              <span class="size-3 rounded-full bg-orange-600"></span>
+            </span>
+            <span class="text-base font-semibold">Мир вокруг</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ============================== О ПРОЕКТЕ ============================== -->
-    <section id="about" class="border-t border-[#262626] py-20 sm:py-24 lg:py-32">
-      <div class="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 2xl:max-w-[88rem]">
-        <div class="grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-16">
-          <h2 data-reveal class="translate-y-6 text-3xl font-semibold tracking-tight opacity-0 transition duration-700 ease-out motion-reduce:transition-none sm:text-4xl lg:text-5xl">О проекте</h2>
-          <p data-reveal class="max-w-xl translate-y-6 text-base leading-relaxed text-zinc-400 opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none sm:text-lg">Этот проект создан для демонстрации возможностей современной веб-разработки. Он показывает весь путь: от идеи и дизайна до работающего сайта, который открывается по ссылке на любом устройстве.</p>
-        </div>
-
-        <div class="mt-12 grid gap-4 md:grid-cols-3 lg:mt-16 lg:gap-6">
-          <div data-reveal class="translate-y-6 opacity-0 transition duration-700 ease-out motion-reduce:transition-none">
-            <article class="group relative h-full overflow-hidden rounded-2xl border border-[#262626] bg-[#111111] p-6 transition duration-300 hover:border-zinc-700 sm:p-8">
-              <div aria-hidden="true" class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/70 to-transparent opacity-0 transition duration-300 group-hover:opacity-100"></div>
-              <p class="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-5xl font-semibold tracking-tight text-transparent">01</p>
-              <h3 class="mt-10 text-xl font-semibold sm:text-2xl">Идея</h3>
-              <p class="mt-3 leading-relaxed text-zinc-400">Понять, что должен показать сайт и для кого он создаётся. Сформулировать цель и набросать структуру разделов.</p>
-            </article>
-          </div>
-          <div data-reveal class="translate-y-6 opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none">
-            <article class="group relative h-full overflow-hidden rounded-2xl border border-[#262626] bg-[#111111] p-6 transition duration-300 hover:border-zinc-700 sm:p-8">
-              <div aria-hidden="true" class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-500/70 to-transparent opacity-0 transition duration-300 group-hover:opacity-100"></div>
-              <p class="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-5xl font-semibold tracking-tight text-transparent">02</p>
-              <h3 class="mt-10 text-xl font-semibold sm:text-2xl">Разработка</h3>
-              <p class="mt-3 leading-relaxed text-zinc-400">Сверстать интерфейс на HTML5 и Tailwind CSS, добавить интерактивность и проверить сайт на экранах разного размера.</p>
-            </article>
-          </div>
-          <div data-reveal class="translate-y-6 opacity-0 transition delay-200 duration-700 ease-out motion-reduce:transition-none">
-            <article class="group relative h-full overflow-hidden rounded-2xl border border-[#262626] bg-[#111111] p-6 transition duration-300 hover:border-zinc-700 sm:p-8">
-              <div aria-hidden="true" class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-violet-500/70 to-transparent opacity-0 transition duration-300 group-hover:opacity-100"></div>
-              <p class="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-5xl font-semibold tracking-tight text-transparent">03</p>
-              <h3 class="mt-10 text-xl font-semibold sm:text-2xl">Результат</h3>
-              <p class="mt-3 leading-relaxed text-zinc-400">Опубликовать сайт через GitHub и Vercel. Готовый проект доступен по ссылке и обновляется после каждого изменения кода.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================== ВОЗМОЖНОСТИ ============================== -->
-    <section id="features" class="relative overflow-hidden border-t border-[#262626] py-20 sm:py-24 lg:py-32">
-      <div aria-hidden="true" class="pointer-events-none absolute right-0 top-0 h-[480px] w-[480px] translate-x-1/3 -translate-y-1/3 rounded-full bg-violet-600/10 blur-3xl"></div>
-
-      <div class="relative mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 2xl:max-w-[88rem]">
-        <div class="grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-16">
-          <h2 data-reveal class="translate-y-6 text-3xl font-semibold tracking-tight opacity-0 transition duration-700 ease-out motion-reduce:transition-none sm:text-4xl lg:text-5xl">Возможности</h2>
-          <p data-reveal class="max-w-xl translate-y-6 text-base leading-relaxed text-zinc-400 opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none sm:text-lg">Шесть принципов, на которых построен сайт. Каждый из них можно проверить прямо сейчас на этой странице.</p>
-        </div>
-
-        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-6">
-
-          <div data-reveal class="translate-y-6 opacity-0 transition duration-700 ease-out motion-reduce:transition-none">
-            <article class="group relative h-full overflow-hidden rounded-2xl border border-[#262626] bg-[#111111] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-[#141414] motion-reduce:hover:translate-y-0 sm:p-7">
-              <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-20 size-48 rounded-full bg-violet-600/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100"></div>
-              <div class="relative flex items-center justify-between">
-                <span class="grid h-8 min-w-8 place-items-center rounded-lg border border-[#262626] bg-[#0a0a0a] px-2 text-xs font-semibold text-zinc-300 transition group-hover:border-violet-500/40 group-hover:text-white">01</span>
-                <svg viewBox="0 0 24 24" class="size-5 text-zinc-500 transition group-hover:text-violet-400" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg>
-              </div>
-              <h3 class="relative mt-8 text-lg font-semibold">Современный интерфейс</h3>
-              <p class="relative mt-2 text-sm leading-relaxed text-zinc-400">Тёмная тема, крупная типографика и аккуратные карточки. На экране только то, что помогает понять проект.</p>
-            </article>
-          </div>
-
-          <div data-reveal class="translate-y-6 opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none">
-            <article class="group relative h-full overflow-hidden rounded-2xl border border-[#262626] bg-[#111111] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-[#141414] motion-reduce:hover:translate-y-0 sm:p-7">
-              <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-20 size-48 rounded-full bg-violet-600/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100"></div>
-              <div class="relative flex items-center justify-between">
-                <span class="grid h-8 min-w-8 place-items-center rounded-lg border border-[#262626] bg-[#0a0a0a] px-2 text-xs font-semibold text-zinc-300 transition group-hover:border-violet-500/40 group-hover:text-white">02</span>
-                <svg viewBox="0 0 24 24" class="size-5 text-zinc-500 transition group-hover:text-violet-400" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="14" height="11" rx="1.5"/><path d="M6 19h6M9 15v4"/><rect x="18" y="8" width="4" height="11" rx="1"/></svg>
-              </div>
-              <h3 class="relative mt-8 text-lg font-semibold">Адаптивный дизайн</h3>
-              <p class="relative mt-2 text-sm leading-relaxed text-zinc-400">Сайт подстраивается под телефон, планшет, ноутбук и большой монитор. Сетка и размер текста меняются на каждом брейкпоинте.</p>
-            </article>
-          </div>
-
-          <div data-reveal class="translate-y-6 opacity-0 transition delay-200 duration-700 ease-out motion-reduce:transition-none">
-            <article class="group relative h-full overflow-hidden rounded-2xl border border-[#262626] bg-[#111111] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-[#141414] motion-reduce:hover:translate-y-0 sm:p-7">
-              <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-20 size-48 rounded-full bg-violet-600/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100"></div>
-              <div class="relative flex items-center justify-between">
-                <span class="grid h-8 min-w-8 place-items-center rounded-lg border border-[#262626] bg-[#0a0a0a] px-2 text-xs font-semibold text-zinc-300 transition group-hover:border-violet-500/40 group-hover:text-white">03</span>
-                <svg viewBox="0 0 24 24" class="size-5 text-zinc-500 transition group-hover:text-violet-400" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>
-              </div>
-              <h3 class="relative mt-8 text-lg font-semibold">Быстрая навигация</h3>
-              <p class="relative mt-2 text-sm leading-relaxed text-zinc-400">Закреплённое меню, плавная прокрутка к разделам и подсветка раздела, который сейчас на экране.</p>
-            </article>
-          </div>
-
-          <div data-reveal class="translate-y-6 opacity-0 transition duration-700 ease-out motion-reduce:transition-none">
-            <article class="group relative h-full overflow-hidden rounded-2xl border border-[#262626] bg-[#111111] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-[#141414] motion-reduce:hover:translate-y-0 sm:p-7">
-              <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-20 size-48 rounded-full bg-violet-600/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100"></div>
-              <div class="relative flex items-center justify-between">
-                <span class="grid h-8 min-w-8 place-items-center rounded-lg border border-[#262626] bg-[#0a0a0a] px-2 text-xs font-semibold text-zinc-300 transition group-hover:border-violet-500/40 group-hover:text-white">04</span>
-                <svg viewBox="0 0 24 24" class="size-5 text-zinc-500 transition group-hover:text-violet-400" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l14 7.5-6.2 1.7L11 18.5z"/><path d="M13 13l5 5"/></svg>
-              </div>
-              <h3 class="relative mt-8 text-lg font-semibold">Интерактивность</h3>
-              <p class="relative mt-2 text-sm leading-relaxed text-zinc-400">Мобильное меню, анимации при прокрутке, демо-окно с переключением устройств и кнопка «Наверх».</p>
-            </article>
-          </div>
-
-          <div data-reveal class="translate-y-6 opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none">
-            <article class="group relative h-full overflow-hidden rounded-2xl border border-[#262626] bg-[#111111] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-[#141414] motion-reduce:hover:translate-y-0 sm:p-7">
-              <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-20 size-48 rounded-full bg-violet-600/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100"></div>
-              <div class="relative flex items-center justify-between">
-                <span class="grid h-8 min-w-8 place-items-center rounded-lg border border-[#262626] bg-[#0a0a0a] px-2 text-xs font-semibold text-zinc-300 transition group-hover:border-violet-500/40 group-hover:text-white">05</span>
-                <svg viewBox="0 0 24 24" class="size-5 text-zinc-500 transition group-hover:text-violet-400" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
-              </div>
-              <h3 class="relative mt-8 text-lg font-semibold">Чистая структура</h3>
-              <p class="relative mt-2 text-sm leading-relaxed text-zinc-400">Семантическая разметка HTML5: header, main, section, footer. Весь код собран в одном файле index.html.</p>
-            </article>
-          </div>
-
-          <div data-reveal class="translate-y-6 opacity-0 transition delay-200 duration-700 ease-out motion-reduce:transition-none">
-            <article class="group relative h-full overflow-hidden rounded-2xl border border-[#262626] bg-[#111111] p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-[#141414] motion-reduce:hover:translate-y-0 sm:p-7">
-              <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-20 size-48 rounded-full bg-violet-600/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100"></div>
-              <div class="relative flex items-center justify-between">
-                <span class="grid h-8 min-w-8 place-items-center rounded-lg border border-[#262626] bg-[#0a0a0a] px-2 text-xs font-semibold text-zinc-300 transition group-hover:border-violet-500/40 group-hover:text-white">06</span>
-                <svg viewBox="0 0 24 24" class="size-5 text-zinc-500 transition group-hover:text-violet-400" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>
-              </div>
-              <h3 class="relative mt-8 text-lg font-semibold">Современные технологии</h3>
-              <p class="relative mt-2 text-sm leading-relaxed text-zinc-400">Tailwind CSS для стилей, JavaScript для интерактивности, Git и GitHub для кода, Vercel для публикации.</p>
-            </article>
-          </div>
-
+    <section class="bg-slate-50 py-14 sm:py-20" aria-labelledby="sections">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+        <h2 id="sections" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">Разделы</h2>
+        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Каждый раздел — отдельная страница своего цвета. Их можно проходить по порядку или выбрать любой.</p>
+        <div class="mt-10 grid gap-4 md:grid-cols-2">
+          <a href="letters.html" class="flex flex-col rounded-3xl p-6 hover:ring-2 hover:ring-slate-900 sm:p-8 bg-violet-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+            <h3 class="font-['Unbounded',sans-serif] text-2xl font-semibold sm:text-3xl">Буквы</h3>
+            <p class="mt-2 text-lg text-slate-700">Весь русский алфавит с подсказками.</p>
+            <ul class="mt-6 space-y-2 text-base font-medium">
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>33 буквы и слово на каждую</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Гласные, согласные и знаки</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>3 вопроса для проверки</li>
+            </ul>
+            <span class="mt-8 w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900">Открыть раздел</span>
+          </a>
+          <a href="numbers.html" class="flex flex-col rounded-3xl p-6 hover:ring-2 hover:ring-slate-900 sm:p-8 bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+            <h3 class="font-['Unbounded',sans-serif] text-2xl font-semibold sm:text-3xl">Цифры</h3>
+            <p class="mt-2 text-lg text-slate-700">Считаем, сравниваем и решаем примеры.</p>
+            <ul class="mt-6 space-y-2 text-base font-medium">
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Счёт от 1 до 10</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Больше, меньше, равно</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Сложение и вычитание</li>
+            </ul>
+            <span class="mt-8 w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900">Открыть раздел</span>
+          </a>
+          <a href="colors.html" class="flex flex-col rounded-3xl p-6 hover:ring-2 hover:ring-slate-900 sm:p-8 bg-emerald-500 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+            <h3 class="font-['Unbounded',sans-serif] text-2xl font-semibold sm:text-3xl">Цвета и фигуры</h3>
+            <p class="mt-2 text-lg text-white/90">Радуга, краски и геометрия.</p>
+            <ul class="mt-6 space-y-2 text-base font-medium">
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>7 цветов радуги</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Смешивание красок</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>8 фигур и их углы</li>
+            </ul>
+            <span class="mt-8 w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900">Открыть раздел</span>
+          </a>
+          <a href="world.html" class="flex flex-col rounded-3xl p-6 hover:ring-2 hover:ring-slate-900 sm:p-8 bg-sky-500 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+            <h3 class="font-['Unbounded',sans-serif] text-2xl font-semibold sm:text-3xl">Мир вокруг</h3>
+            <p class="mt-2 text-lg text-white/90">Природа и космос рядом с нами.</p>
+            <ul class="mt-6 space-y-2 text-base font-medium">
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Кто как говорит</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Времена года и месяцы</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>8 планет Солнечной системы</li>
+            </ul>
+            <span class="mt-8 w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900">Открыть раздел</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ============================== ПРОЦЕСС ============================== -->
-    <section id="process" class="border-t border-[#262626] py-20 sm:py-24 lg:py-32">
-      <div class="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 2xl:max-w-[88rem]">
-        <div class="grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-16">
-          <h2 data-reveal class="translate-y-6 text-3xl font-semibold tracking-tight opacity-0 transition duration-700 ease-out motion-reduce:transition-none sm:text-4xl lg:text-5xl">Как создавался проект</h2>
-          <p data-reveal class="max-w-xl translate-y-6 text-base leading-relaxed text-zinc-400 opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none sm:text-lg">Четыре этапа: от первой мысли до показа на Demo Day.</p>
-        </div>
-
-        <div class="relative mt-14 lg:mt-20">
-          <div aria-hidden="true" class="absolute bottom-0 left-5 top-0 w-px bg-gradient-to-b from-blue-500/70 via-violet-500/50 to-transparent lg:bottom-auto lg:left-0 lg:right-0 lg:top-5 lg:h-px lg:w-auto lg:bg-gradient-to-r"></div>
-
-          <ol class="relative grid gap-12 lg:grid-cols-4 lg:gap-8">
-            <li data-reveal class="relative translate-y-6 pl-16 opacity-0 transition duration-700 ease-out motion-reduce:transition-none lg:pl-0 lg:pt-16">
-              <span class="absolute left-0 top-0 grid size-10 place-items-center rounded-full border border-blue-500/50 bg-[#0a0a0a] text-sm font-semibold shadow-[0_0_24px_rgba(59,130,246,0.35)]">01</span>
-              <h3 class="text-xl font-semibold">Идея</h3>
-              <p class="mt-2 leading-relaxed text-zinc-400">Выбор темы, определение аудитории и главной цели сайта.</p>
-            </li>
-            <li data-reveal class="relative translate-y-6 pl-16 opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none lg:pl-0 lg:pt-16">
-              <span class="absolute left-0 top-0 grid size-10 place-items-center rounded-full border border-indigo-500/50 bg-[#0a0a0a] text-sm font-semibold shadow-[0_0_24px_rgba(99,102,241,0.35)]">02</span>
-              <h3 class="text-xl font-semibold">Планирование</h3>
-              <p class="mt-2 leading-relaxed text-zinc-400">Структура разделов, выбор цветов и шрифтов, первый макет страницы.</p>
-            </li>
-            <li data-reveal class="relative translate-y-6 pl-16 opacity-0 transition delay-200 duration-700 ease-out motion-reduce:transition-none lg:pl-0 lg:pt-16">
-              <span class="absolute left-0 top-0 grid size-10 place-items-center rounded-full border border-violet-500/50 bg-[#0a0a0a] text-sm font-semibold shadow-[0_0_24px_rgba(139,92,246,0.35)]">03</span>
-              <h3 class="text-xl font-semibold">Разработка</h3>
-              <p class="mt-2 leading-relaxed text-zinc-400">Вёрстка на HTML5 и Tailwind CSS, адаптивность, интерактивные элементы, исправление ошибок.</p>
-            </li>
-            <li data-reveal class="relative translate-y-6 pl-16 opacity-0 transition delay-300 duration-700 ease-out motion-reduce:transition-none lg:pl-0 lg:pt-16">
-              <span class="absolute left-0 top-0 grid size-10 place-items-center rounded-full border border-violet-400/50 bg-[#0a0a0a] text-sm font-semibold shadow-[0_0_24px_rgba(167,139,250,0.35)]">04</span>
-              <h3 class="text-xl font-semibold">Презентация</h3>
-              <p class="mt-2 leading-relaxed text-zinc-400">Публикация на Vercel и показ готового проекта на IT Demo Day.</p>
-            </li>
-          </ol>
-        </div>
+    <section class="py-14 sm:py-20" aria-labelledby="how">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+        <h2 id="how" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">Как заниматься</h2>
+        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Три простых шага, чтобы занятие было полезным.</p>
+        <ol class="mt-10 grid gap-4 md:grid-cols-3">
+          <li class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+            <span class="grid size-12 place-items-center rounded-full bg-slate-900 font-['Unbounded',sans-serif] text-lg font-semibold text-white">1</span>
+            <h3 class="mt-6 font-['Unbounded',sans-serif] text-xl font-semibold">Выбери раздел</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">Начни с того, что интересно: букв, цифр, цветов или мира вокруг.</p>
+          </li>
+          <li class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+            <span class="grid size-12 place-items-center rounded-full bg-slate-900 font-['Unbounded',sans-serif] text-lg font-semibold text-white">2</span>
+            <h3 class="mt-6 font-['Unbounded',sans-serif] text-xl font-semibold">Читай вместе со взрослым</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">Рассматривайте карточки, произносите слова и считайте вслух.</p>
+          </li>
+          <li class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+            <span class="grid size-12 place-items-center rounded-full bg-slate-900 font-['Unbounded',sans-serif] text-lg font-semibold text-white">3</span>
+            <h3 class="mt-6 font-['Unbounded',sans-serif] text-xl font-semibold">Проверь себя</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">В конце каждого раздела есть вопросы. Ответ можно открыть кнопкой.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ============================== ДЕМО ============================== -->
-    <section id="demo" class="relative overflow-hidden border-t border-[#262626] py-20 sm:py-24 lg:py-32">
-      <div aria-hidden="true" class="pointer-events-none absolute bottom-0 left-0 h-[480px] w-[640px] -translate-x-1/3 translate-y-1/3 rounded-full bg-blue-600/10 blur-3xl"></div>
-
-      <div class="relative mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8 2xl:max-w-[88rem]">
-        <div data-reveal class="translate-y-6 opacity-0 transition duration-700 ease-out motion-reduce:transition-none lg:col-span-5">
-          <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">Проект в действии</h2>
-          <p class="mt-5 max-w-lg text-base leading-relaxed text-zinc-400 sm:text-lg">Это живой макет сайта. Переключи устройство над окном, и интерфейс перестроится так же, как настоящая страница на телефоне, планшете или компьютере.</p>
-
-          <ul class="mt-8 space-y-3 text-sm text-zinc-300 sm:text-base">
-            <li class="flex items-start gap-3">
-              <svg viewBox="0 0 24 24" class="mt-0.5 size-5 shrink-0 text-violet-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
-              Сетка меняется под ширину экрана
-            </li>
-            <li class="flex items-start gap-3">
-              <svg viewBox="0 0 24 24" class="mt-0.5 size-5 shrink-0 text-violet-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
-              Меню сворачивается в иконку на телефоне
-            </li>
-            <li class="flex items-start gap-3">
-              <svg viewBox="0 0 24 24" class="mt-0.5 size-5 shrink-0 text-violet-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
-              Без единой картинки: всё сделано на HTML и Tailwind
-            </li>
-          </ul>
-
-          <div class="mt-10 flex flex-col gap-3 sm:flex-row">
-            <button id="open-demo" type="button" class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-600/25 transition duration-300 hover:shadow-violet-600/40 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]">
-              <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
-              Открыть демо
-            </button>
-            <a href="https://github.com/aitbaevbahriddinn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-xl border border-[#262626] bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:border-zinc-600 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]">
-              <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v12M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 9a9 9 0 0 1-9 9"/></svg>
-              GitHub
-            </a>
+    <section class="bg-slate-50 py-14 sm:py-20" aria-labelledby="about">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+        <h2 id="about" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">О проекте</h2>
+        <div class="mt-10 grid gap-8 md:grid-cols-3">
+          <div class="border-t-4 border-slate-900 pt-5">
+            <h3 class="font-['Unbounded',sans-serif] text-lg font-semibold">Цель</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">Создание понятной детям страницы с помощью красочных разделов.</p>
           </div>
-        </div>
-
-        <div id="demo-slot" data-reveal class="translate-y-6 opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none lg:col-span-7">
-          <!-- Окно браузера с макетом сайта -->
-          <div id="demo-window" class="overflow-hidden rounded-2xl border border-[#262626] bg-[#111111] shadow-2xl shadow-black/60">
-
-            <div class="flex flex-wrap items-center gap-3 border-b border-[#262626] px-4 py-3">
-              <div class="flex gap-1.5" aria-hidden="true">
-                <span class="size-3 rounded-full bg-[#2a2a2a]"></span>
-                <span class="size-3 rounded-full bg-[#2a2a2a]"></span>
-                <span class="size-3 rounded-full bg-[#2a2a2a]"></span>
-              </div>
-              <div class="order-last flex min-w-0 basis-full items-center gap-2 rounded-lg border border-[#262626] bg-[#0a0a0a] px-3 py-1.5 text-xs text-zinc-500 sm:order-none sm:flex-1 sm:basis-auto">
-                <svg viewBox="0 0 24 24" class="size-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-                <span class="truncate">orbita.vercel.app</span>
-              </div>
-              <div role="group" aria-label="Размер экрана" class="ml-auto flex rounded-lg border border-[#262626] bg-[#0a0a0a] p-0.5">
-                <button type="button" data-device="desktop" aria-pressed="true" aria-label="Компьютер" class="grid h-7 w-8 place-items-center rounded-md bg-white/10 text-white transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">
-                  <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
-                </button>
-                <button type="button" data-device="tablet" aria-pressed="false" aria-label="Планшет" class="grid h-7 w-8 place-items-center rounded-md text-zinc-500 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">
-                  <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M11 18h2"/></svg>
-                </button>
-                <button type="button" data-device="mobile" aria-pressed="false" aria-label="Телефон" class="grid h-7 w-8 place-items-center rounded-md text-zinc-500 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">
-                  <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="flex justify-center bg-[#0a0a0a] p-3 sm:p-6">
-              <!-- data-size меняется скриптом: desktop / tablet / mobile -->
-              <div id="demo-viewport" data-size="desktop" aria-label="Макет сайта" role="img" class="group w-full max-w-full overflow-hidden rounded-xl border border-[#262626] bg-[#0d0d0d] transition-[max-width] duration-500 ease-out motion-reduce:transition-none">
-
-                <div class="flex items-center justify-between gap-3 border-b border-[#262626] px-4 py-3">
-                  <div class="flex items-center gap-2">
-                    <span class="size-5 rounded-md bg-gradient-to-br from-blue-500 to-violet-600"></span>
-                    <span class="text-xs font-semibold">Orbita</span>
-                  </div>
-                  <div class="flex items-center gap-4 text-[11px] text-zinc-500 group-data-[size=mobile]:hidden">
-                    <span>О проекте</span><span>Возможности</span><span class="group-data-[size=tablet]:hidden">Процесс</span>
-                  </div>
-                  <span class="rounded-md bg-gradient-to-r from-blue-600 to-violet-600 px-2.5 py-1 text-[10px] font-semibold group-data-[size=mobile]:hidden">Посмотреть</span>
-                  <span class="hidden flex-col gap-1 group-data-[size=mobile]:flex">
-                    <span class="h-0.5 w-4 rounded bg-zinc-400"></span><span class="h-0.5 w-4 rounded bg-zinc-400"></span><span class="h-0.5 w-4 rounded bg-zinc-400"></span>
-                  </span>
-                </div>
-
-                <div class="relative overflow-hidden px-5 py-9 text-center group-data-[size=mobile]:py-7">
-                  <div class="absolute left-1/2 top-0 h-32 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/25 blur-3xl"></div>
-                  <p class="relative text-2xl font-semibold leading-tight tracking-tight group-data-[size=mobile]:text-lg">Создавай. Развивайся.<br>Показывай результат.</p>
-                  <p class="relative mx-auto mt-3 max-w-xs text-xs leading-relaxed text-zinc-500">Дизайн, технологии и интерактивный пользовательский опыт.</p>
-                  <div class="relative mt-5 flex justify-center gap-2">
-                    <span class="rounded-md bg-gradient-to-r from-blue-600 to-violet-600 px-3 py-1.5 text-[10px] font-semibold">Посмотреть проект</span>
-                    <span class="rounded-md border border-[#262626] px-3 py-1.5 text-[10px] text-zinc-300">Узнать больше</span>
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-3 gap-2 px-4 pb-4 group-data-[size=mobile]:grid-cols-1 group-data-[size=tablet]:grid-cols-2">
-                  <div class="rounded-lg border border-[#262626] bg-[#111111] p-3"><span class="text-[10px] text-zinc-500">01</span><p class="mt-2 text-[11px] font-medium">Интерфейс</p><span class="mt-2 block h-1 w-3/4 rounded bg-white/10"></span><span class="mt-1 block h-1 w-1/2 rounded bg-white/10"></span></div>
-                  <div class="rounded-lg border border-[#262626] bg-[#111111] p-3"><span class="text-[10px] text-zinc-500">02</span><p class="mt-2 text-[11px] font-medium">Адаптивность</p><span class="mt-2 block h-1 w-3/4 rounded bg-white/10"></span><span class="mt-1 block h-1 w-1/2 rounded bg-white/10"></span></div>
-                  <div class="rounded-lg border border-[#262626] bg-[#111111] p-3"><span class="text-[10px] text-zinc-500">03</span><p class="mt-2 text-[11px] font-medium">Навигация</p><span class="mt-2 block h-1 w-3/4 rounded bg-white/10"></span><span class="mt-1 block h-1 w-1/2 rounded bg-white/10"></span></div>
-                  <div class="rounded-lg border border-[#262626] bg-[#111111] p-3"><span class="text-[10px] text-zinc-500">04</span><p class="mt-2 text-[11px] font-medium">Интерактивность</p><span class="mt-2 block h-1 w-3/4 rounded bg-white/10"></span><span class="mt-1 block h-1 w-1/2 rounded bg-white/10"></span></div>
-                  <div class="rounded-lg border border-[#262626] bg-[#111111] p-3 group-data-[size=mobile]:hidden"><span class="text-[10px] text-zinc-500">05</span><p class="mt-2 text-[11px] font-medium">Структура</p><span class="mt-2 block h-1 w-3/4 rounded bg-white/10"></span><span class="mt-1 block h-1 w-1/2 rounded bg-white/10"></span></div>
-                  <div class="rounded-lg border border-[#262626] bg-[#111111] p-3 group-data-[size=mobile]:hidden"><span class="text-[10px] text-zinc-500">06</span><p class="mt-2 text-[11px] font-medium">Технологии</p><span class="mt-2 block h-1 w-3/4 rounded bg-white/10"></span><span class="mt-1 block h-1 w-1/2 rounded bg-white/10"></span></div>
-                </div>
-
-                <div class="grid grid-cols-4 border-t border-[#262626] text-center group-data-[size=mobile]:grid-cols-2">
-                  <div class="px-2 py-3"><p class="text-sm font-semibold">01</p><p class="text-[10px] text-zinc-500">Project</p></div>
-                  <div class="px-2 py-3"><p class="text-sm font-semibold">06+</p><p class="text-[10px] text-zinc-500">Features</p></div>
-                  <div class="px-2 py-3"><p class="text-sm font-semibold">100%</p><p class="text-[10px] text-zinc-500">Responsive</p></div>
-                  <div class="px-2 py-3"><p class="text-sm font-semibold">24/7</p><p class="text-[10px] text-zinc-500">Available</p></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between border-t border-[#262626] px-4 py-2.5 text-xs text-zinc-500">
-              <span>Ширина экрана</span>
-              <span id="demo-width" aria-live="polite" class="font-medium text-zinc-300">—</span>
-            </div>
+          <div class="border-t-4 border-slate-900 pt-5">
+            <h3 class="font-['Unbounded',sans-serif] text-lg font-semibold">Для кого</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">Дети 5–8 лет, которые учатся читать и считать, и их родители.</p>
+          </div>
+          <div class="border-t-4 border-slate-900 pt-5">
+            <h3 class="font-['Unbounded',sans-serif] text-lg font-semibold">Как сделано</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">Пять страниц на HTML и Tailwind CSS. Без JavaScript: ответы в разделе «Проверь себя» открываются средствами самого HTML.</p>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- ============================== СТАТИСТИКА ============================== -->
-    <section id="stats" aria-label="Проект в цифрах" class="border-t border-[#262626] py-20 sm:py-24">
-      <div class="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 2xl:max-w-[88rem]">
-        <div data-reveal class="relative translate-y-6 overflow-hidden rounded-3xl border border-[#262626] opacity-0 transition duration-700 ease-out motion-reduce:transition-none">
-          <div aria-hidden="true" class="absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-violet-500/80 to-transparent"></div>
-          <dl class="grid grid-cols-2 gap-px bg-[#262626] lg:grid-cols-4">
-            <div class="flex flex-col-reverse gap-2 bg-[#0d0d0d] p-6 sm:p-10">
-              <dt class="text-sm text-zinc-400 sm:text-base">Project</dt>
-              <dd class="bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-5xl font-semibold tracking-tight text-transparent sm:text-6xl xl:text-7xl">01</dd>
-            </div>
-            <div class="flex flex-col-reverse gap-2 bg-[#0d0d0d] p-6 sm:p-10">
-              <dt class="text-sm text-zinc-400 sm:text-base">Features</dt>
-              <dd class="bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-5xl font-semibold tracking-tight text-transparent sm:text-6xl xl:text-7xl">06+</dd>
-            </div>
-            <div class="flex flex-col-reverse gap-2 bg-[#0d0d0d] p-6 sm:p-10">
-              <dt class="text-sm text-zinc-400 sm:text-base">Responsive</dt>
-              <dd class="bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-5xl font-semibold tracking-tight text-transparent sm:text-6xl xl:text-7xl">100%</dd>
-            </div>
-            <div class="flex flex-col-reverse gap-2 bg-[#0d0d0d] p-6 sm:p-10">
-              <dt class="text-sm text-zinc-400 sm:text-base">Available</dt>
-              <dd class="bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-5xl font-semibold tracking-tight text-transparent sm:text-6xl xl:text-7xl">24/7</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================== ТЕХНОЛОГИИ ============================== -->
-    <section id="tech" class="border-t border-[#262626] py-20 sm:py-24 lg:py-32">
-      <div class="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 2xl:max-w-[88rem]">
-        <div class="grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-16">
-          <h2 data-reveal class="translate-y-6 text-3xl font-semibold tracking-tight opacity-0 transition duration-700 ease-out motion-reduce:transition-none sm:text-4xl lg:text-5xl">Технологии</h2>
-          <p data-reveal class="max-w-xl translate-y-6 text-base leading-relaxed text-zinc-400 opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none sm:text-lg">Сайт написан на HTML5 и Tailwind CSS, интерактивные функции добавлены на JavaScript. Git, GitHub и Vercel помогают хранить код и публиковать проект.</p>
-        </div>
-
-        <div class="mt-12 grid gap-4 lg:mt-16 lg:grid-cols-2 lg:gap-6">
-
-          <div data-reveal class="translate-y-6 opacity-0 transition duration-700 ease-out motion-reduce:transition-none">
-            <div class="h-full rounded-2xl border border-[#262626] bg-[#111111] p-6 sm:p-8">
-              <div class="flex items-center justify-between gap-4">
-                <h3 class="text-lg font-semibold">Код сайта</h3>
-                <span class="rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-300">В проекте</span>
-              </div>
-              <ul class="mt-6 space-y-3">
-                <li class="flex items-center gap-4 rounded-xl border border-[#262626] bg-[#0a0a0a] p-4 transition duration-300 hover:border-blue-500/40">
-                  <span class="grid size-11 shrink-0 place-items-center rounded-lg border border-[#262626] bg-[#111111] text-sm font-semibold text-zinc-200">H5</span>
-                  <div><p class="font-medium">HTML5</p><p class="text-sm text-zinc-500">Структура и семантика страницы</p></div>
-                </li>
-                <li class="flex items-center gap-4 rounded-xl border border-[#262626] bg-[#0a0a0a] p-4 transition duration-300 hover:border-blue-500/40">
-                  <span class="grid size-11 shrink-0 place-items-center rounded-lg border border-[#262626] bg-[#111111] text-sm font-semibold text-zinc-200">TW</span>
-                  <div><p class="font-medium">Tailwind CSS</p><p class="text-sm text-zinc-500">Все стили через классы прямо в HTML</p></div>
-                </li>
-                <li class="flex items-center gap-4 rounded-xl border border-[#262626] bg-[#0a0a0a] p-4 transition duration-300 hover:border-blue-500/40">
-                  <span class="grid size-11 shrink-0 place-items-center rounded-lg border border-[#262626] bg-[#111111] text-sm font-semibold text-zinc-200">JS</span>
-                  <div><p class="font-medium">JavaScript</p><p class="text-sm text-zinc-500">Меню, анимации и демо-окно</p></div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div data-reveal class="translate-y-6 opacity-0 transition delay-100 duration-700 ease-out motion-reduce:transition-none">
-            <div class="h-full rounded-2xl border border-[#262626] bg-[#111111] p-6 sm:p-8">
-              <div class="flex items-center justify-between gap-4">
-                <h3 class="text-lg font-semibold">Инструменты</h3>
-                <span class="rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-300">Для работы</span>
-              </div>
-              <ul class="mt-6 space-y-3">
-                <li class="flex items-center gap-4 rounded-xl border border-[#262626] bg-[#0a0a0a] p-4 transition duration-300 hover:border-violet-500/40">
-                  <span class="grid size-11 shrink-0 place-items-center rounded-lg border border-[#262626] bg-[#111111] text-sm font-semibold text-zinc-200">Git</span>
-                  <div><p class="font-medium">Git</p><p class="text-sm text-zinc-500">История изменений кода</p></div>
-                </li>
-                <li class="flex items-center gap-4 rounded-xl border border-[#262626] bg-[#0a0a0a] p-4 transition duration-300 hover:border-violet-500/40">
-                  <span class="grid size-11 shrink-0 place-items-center rounded-lg border border-[#262626] bg-[#111111] text-sm font-semibold text-zinc-200">GH</span>
-                  <div><p class="font-medium">GitHub</p><p class="text-sm text-zinc-500">Хранение кода проекта</p></div>
-                </li>
-                <li class="flex items-center gap-4 rounded-xl border border-[#262626] bg-[#0a0a0a] p-4 transition duration-300 hover:border-violet-500/40">
-                  <span class="grid size-11 shrink-0 place-items-center rounded-lg border border-[#262626] bg-[#111111] text-sm font-semibold text-zinc-200">V</span>
-                  <div><p class="font-medium">Vercel</p><p class="text-sm text-zinc-500">Публикация сайта в интернете</p></div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================== CTA ============================== -->
-    <section id="cta" class="border-t border-[#262626] py-20 sm:py-24 lg:py-32">
-      <div class="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 2xl:max-w-[88rem]">
-        <div data-reveal class="relative translate-y-6 overflow-hidden rounded-3xl border border-[#262626] bg-[#111111] px-6 py-16 text-center opacity-0 transition duration-700 ease-out motion-reduce:transition-none sm:px-12 sm:py-20 lg:py-28">
-          <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_60%_70%_at_50%_0%,#000_20%,transparent_100%)]"></div>
-          <div aria-hidden="true" class="pointer-events-none absolute -top-40 left-1/2 h-80 w-[44rem] max-w-[140%] -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-600/30 to-violet-600/30 blur-3xl"></div>
-
-          <h2 class="relative mx-auto max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">Готовы увидеть результат?</h2>
-          <p class="relative mx-auto mt-5 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">Проект объединяет современный дизайн, веб-разработку и интерактивный пользовательский опыт.</p>
-          <a href="#demo" class="relative mt-10 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-violet-600/25 transition duration-300 hover:shadow-violet-600/40 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#111111]">Посмотреть проект</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ============================== FOOTER ============================== -->
-  <footer id="contacts" class="border-t border-[#262626]">
-    <div class="mx-auto w-full max-w-7xl px-5 py-14 sm:px-6 sm:py-16 lg:px-8 2xl:max-w-[88rem]">
-      <div class="grid gap-10 md:grid-cols-12">
-
-        <div class="md:col-span-5">
-          <a href="#home" class="inline-flex items-center gap-2.5 rounded-lg text-base font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">
-            <span class="grid size-8 place-items-center rounded-lg bg-gradient-to-br from-blue-500 to-violet-600">
-              <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="5.5"/><circle cx="18.5" cy="5.5" r="1.6" fill="currentColor" stroke="none"/></svg>
-            </span>
-            Orbita
-          </a>
-          <p class="mt-4 max-w-sm text-sm leading-relaxed text-zinc-400">Веб-проект для IT Demo Day. Сделан на HTML5 и Tailwind CSS, опубликован на Vercel.</p>
-        </div>
-
-        <nav aria-label="Навигация в подвале" class="md:col-span-3">
-          <h2 class="text-sm font-semibold">Навигация</h2>
-          <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-zinc-400 md:grid-cols-1">
-            <li><a href="#home" class="transition hover:text-white">Главная</a></li>
-            <li><a href="#about" class="transition hover:text-white">О проекте</a></li>
-            <li><a href="#features" class="transition hover:text-white">Возможности</a></li>
-            <li><a href="#process" class="transition hover:text-white">Процесс</a></li>
-            <li><a href="#tech" class="transition hover:text-white">Технологии</a></li>
-            <li><a href="#demo" class="transition hover:text-white">Демо</a></li>
-          </ul>
-        </nav>
-
-        <div class="md:col-span-4">
-          <h2 class="text-sm font-semibold">Контакты</h2>
-          <ul class="mt-4 space-y-3">
-            <li>
-              <a href="https://github.com/aitbaevbahriddinn" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 rounded-xl border border-[#262626] bg-[#111111] p-3 transition hover:border-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">
-                <span class="grid size-9 shrink-0 place-items-center rounded-lg border border-[#262626] bg-[#0a0a0a] text-xs font-semibold text-zinc-300">GH</span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-medium">GitHub</span>
-                  <span class="block truncate text-xs text-zinc-500 transition group-hover:text-zinc-300">github.com/aitbaevbahriddinn</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 rounded-xl border border-[#262626] bg-[#111111] p-3 transition hover:border-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">
-                <span class="grid size-9 shrink-0 place-items-center rounded-lg border border-[#262626] bg-[#0a0a0a] text-xs font-semibold text-zinc-300">V</span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-medium">Vercel</span>
-                  <span class="block truncate text-xs text-zinc-500 transition group-hover:text-zinc-300">Хостинг проекта</span>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="mt-12 flex flex-col gap-4 border-t border-[#262626] pt-8 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-        <p>© 2026 Orbita. Автор: Бахриддин.</p>
-        <p>Проект для IT Demo Day</p>
-      </div>
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-col gap-4 py-10 sm:flex-row sm:items-center sm:justify-between">
+      <a href="index.html" class="flex w-fit items-center gap-3 rounded-lg font-['Unbounded',sans-serif] text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+        <span class="grid size-9 shrink-0 grid-cols-2 gap-0.5" aria-hidden="true"><span class="rounded-md bg-violet-500"></span><span class="rounded-md bg-amber-400"></span><span class="rounded-md bg-emerald-500"></span><span class="rounded-md bg-sky-500"></span></span>
+        Умняша
+      </a>
+      <p class="text-sm text-slate-500">Образовательная страница для детей. Проект для Demo Day, 2026. Автор: Бахриддин.</p>
     </div>
   </footer>
-
-  <!-- Кнопка «Наверх» -->
-  <button id="back-to-top" type="button" aria-label="Наверх" class="invisible fixed bottom-5 right-5 z-40 grid size-12 translate-y-4 place-items-center rounded-full border border-[#262626] bg-[#111111]/80 text-zinc-300 opacity-0 shadow-lg shadow-black/40 backdrop-blur-xl transition-all duration-300 hover:border-violet-500/50 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 sm:bottom-8 sm:right-8">
-    <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-  </button>
-
-  <!-- Демо в отдельном окне -->
-  <dialog id="demo-dialog" aria-labelledby="demo-dialog-title" class="max-h-[calc(100dvh-1.5rem)] w-[min(72rem,calc(100%-1.5rem))] max-w-none overflow-y-auto rounded-3xl border border-[#262626] bg-[#0a0a0a] p-0 text-white shadow-2xl backdrop:bg-black/80 backdrop:backdrop-blur-sm">
-    <div class="flex items-center justify-between gap-4 border-b border-[#262626] px-5 py-4 sm:px-6">
-      <div>
-        <h2 id="demo-dialog-title" class="text-lg font-semibold">Демо проекта</h2>
-        <p class="text-sm text-zinc-500">Переключай размер экрана в правом верхнем углу окна.</p>
-      </div>
-      <button id="close-demo" type="button" aria-label="Закрыть демо" class="grid size-10 shrink-0 place-items-center rounded-xl border border-[#262626] text-zinc-300 transition hover:border-zinc-600 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">
-        <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-    </div>
-    <div id="demo-dialog-body" class="p-4 sm:p-6"></div>
-  </dialog>
-
-  <!-- ============================== JAVASCRIPT ============================== -->
-  <script>
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    /* ---------- 1. Мобильное меню (hamburger) ---------- */
-    const menuButton = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const iconOpen = document.getElementById('icon-open');
-    const iconClose = document.getElementById('icon-close');
-
-    function setMenu(open) {
-      mobileMenu.classList.toggle('hidden', !open);
-      iconOpen.classList.toggle('hidden', open);
-      iconClose.classList.toggle('hidden', !open);
-      menuButton.setAttribute('aria-expanded', String(open));
-      menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
-    }
-
-    menuButton.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') setMenu(false);
-    });
-    window.matchMedia('(min-width: 1024px)').addEventListener('change', (event) => {
-      if (event.matches) setMenu(false);
-    });
-
-    /* ---------- 2. Плавная прокрутка к разделам ---------- */
-    document.querySelectorAll('a[href^="#"]').forEach((link) => {
-      link.addEventListener('click', (event) => {
-        const id = link.getAttribute('href');
-        const target = id.length > 1 ? document.querySelector(id) : null;
-        if (!target) return;
-        event.preventDefault();
-        setMenu(false);
-        target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-        if (id === '#main') target.focus({ preventScroll: true });
-        history.replaceState(null, '', id);
-      });
-    });
-
-    /* ---------- 3. Подсветка активного пункта меню ---------- */
-    const navLinks = [...document.querySelectorAll('[data-nav]')];
-    const navSections = [...new Set(navLinks.map((link) => link.getAttribute('href')))]
-      .map((id) => document.querySelector(id));
-    const ACTIVE = ['text-white', 'bg-white/5'];
-    const INACTIVE = ['text-zinc-400'];
-    let activeId = '';
-
-    function setActive(id) {
-      if (id === activeId) return;
-      activeId = id;
-      navLinks.forEach((link) => {
-        const isActive = link.getAttribute('href') === '#' + id;
-        link.classList.remove(...(isActive ? INACTIVE : ACTIVE));
-        link.classList.add(...(isActive ? ACTIVE : INACTIVE));
-        if (isActive) link.setAttribute('aria-current', 'true');
-        else link.removeAttribute('aria-current');
-      });
-    }
-
-    /* ---------- 4. Кнопка «Наверх» ---------- */
-    const backToTop = document.getElementById('back-to-top');
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
-    });
-
-    function onScroll() {
-      // какой раздел сейчас на экране
-      const line = window.innerHeight * 0.35;
-      let current = navSections[0].id;
-      navSections.forEach((section) => {
-        if (section.getBoundingClientRect().top <= line) current = section.id;
-      });
-      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
-      if (atBottom) current = navSections[navSections.length - 1].id;
-      setActive(current);
-
-      // показать или спрятать кнопку «Наверх»
-      const show = window.scrollY > 600;
-      backToTop.classList.toggle('invisible', !show);
-      backToTop.classList.toggle('opacity-0', !show);
-      backToTop.classList.toggle('translate-y-4', !show);
-    }
-
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => { onScroll(); ticking = false; });
-    }, { passive: true });
-    window.addEventListener('resize', onScroll);
-    onScroll();
-
-    /* ---------- 5. Анимации при прокрутке ---------- */
-    const revealItems = document.querySelectorAll('[data-reveal]');
-    const reveal = (el) => el.classList.remove('opacity-0', 'translate-y-6');
-
-    if (reduceMotion || !('IntersectionObserver' in window)) {
-      revealItems.forEach(reveal);
-    } else {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          reveal(entry.target);
-          revealObserver.unobserve(entry.target);
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      revealItems.forEach((el) => revealObserver.observe(el));
-    }
-
-    /* ---------- 6. Демо: переключение устройства ---------- */
-    const demoViewport = document.getElementById('demo-viewport');
-    const demoWidth = document.getElementById('demo-width');
-    const deviceButtons = document.querySelectorAll('[data-device]');
-    const DEVICE_WIDTH = { desktop: '100%', tablet: '480px', mobile: '340px' };
-
-    deviceButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        demoViewport.style.maxWidth = DEVICE_WIDTH[button.dataset.device];
-        deviceButtons.forEach((b) => {
-          const isActive = b === button;
-          b.setAttribute('aria-pressed', String(isActive));
-          b.classList.toggle('bg-white/10', isActive);
-          b.classList.toggle('text-white', isActive);
-          b.classList.toggle('text-zinc-500', !isActive);
-        });
-      });
-    });
-
-    // макет перестраивается по своей реальной ширине
-    new ResizeObserver(([entry]) => {
-      const width = Math.round(entry.contentRect.width);
-      demoViewport.dataset.size = width < 400 ? 'mobile' : width < 560 ? 'tablet' : 'desktop';
-      demoWidth.textContent = width + ' px';
-    }).observe(demoViewport);
-
-    /* ---------- 7. Демо в отдельном окне ---------- */
-    const demoDialog = document.getElementById('demo-dialog');
-    const demoDialogBody = document.getElementById('demo-dialog-body');
-    const demoWindow = document.getElementById('demo-window');
-    const demoSlot = document.getElementById('demo-slot');
-
-    document.getElementById('open-demo').addEventListener('click', () => {
-      demoSlot.style.minHeight = demoSlot.offsetHeight + 'px';
-      demoDialogBody.appendChild(demoWindow);
-      demoDialog.showModal();
-    });
-    document.getElementById('close-demo').addEventListener('click', () => demoDialog.close());
-    demoDialog.addEventListener('click', (event) => {
-      if (event.target === demoDialog) demoDialog.close();
-    });
-    demoDialog.addEventListener('close', () => {
-      demoSlot.appendChild(demoWindow);
-      demoSlot.style.minHeight = '';
-    });
-  </script>
 </body>
 </html>

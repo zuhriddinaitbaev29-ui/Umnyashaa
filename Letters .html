@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Буквы — Умняша</title>
+  <meta name="description" content="Русский алфавит для детей: 33 буквы, гласные и согласные, слова на каждую букву.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='15' height='15' rx='4' fill='%238b5cf6'/%3E%3Crect x='17' width='15' height='15' rx='4' fill='%23fbbf24'/%3E%3Crect y='17' width='15' height='15' rx='4' fill='%2310b981'/%3E%3Crect x='17' y='17' width='15' height='15' rx='4' fill='%230ea5e9'/%3E%3C/svg%3E">
+
+  <!-- Шрифты: Unbounded для заголовков, Onest для текста -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white font-['Onest',sans-serif] text-slate-900 antialiased">
+  <a href="#main" class="sr-only rounded-lg bg-slate-900 px-4 py-2 text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-4">Перейти к содержанию</a>
+
+  <header class="border-b border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-col gap-3 py-4 md:flex-row md:items-center md:justify-between">
+      <a href="index.html" class="flex w-fit items-center gap-3 rounded-lg font-['Unbounded',sans-serif] text-lg font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+        <span class="grid size-9 shrink-0 grid-cols-2 gap-0.5" aria-hidden="true"><span class="rounded-md bg-violet-500"></span><span class="rounded-md bg-amber-400"></span><span class="rounded-md bg-emerald-500"></span><span class="rounded-md bg-sky-500"></span></span>
+        Умняша
+      </a>
+      <nav aria-label="Разделы сайта">
+        <ul class="-mx-1 flex flex-wrap gap-1">
+          <li><a href="index.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Главная</a></li>
+          <li><a href="letters.html" aria-current="page" class="block rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Буквы</a></li>
+          <li><a href="numbers.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Цифры</a></li>
+          <li><a href="colors.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Цвета и фигуры</a></li>
+          <li><a href="world.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Мир вокруг</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="bg-violet-100">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 grid items-center gap-10 py-14 sm:py-20 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <h1 class="font-['Unbounded',sans-serif] text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">Буквы</h1>
+          <p class="mt-5 max-w-xl text-lg leading-relaxed sm:text-xl text-slate-700">В русском алфавите 33 буквы. Посмотри на каждую букву и прочитай слово, которое с неё начинается.</p>
+          <p class="mt-8 text-sm font-semibold text-slate-600">В этом разделе:</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <a href="#alphabet" class="rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Алфавит</a>
+            <a href="#sounds" class="rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Гласные и согласные</a>
+            <a href="#quiz" class="rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">Проверь себя</a>
+          </div>
+        </div>
+        <dl class="grid grid-cols-2 gap-3">
+          <div class="flex flex-col-reverse rounded-2xl bg-white p-5 sm:p-6">
+            <dt class="text-sm font-medium text-slate-500">буквы в алфавите</dt>
+            <dd class="mb-1 font-['Unbounded',sans-serif] text-4xl font-semibold text-slate-900 sm:text-5xl">33</dd>
+          </div>
+          <div class="flex flex-col-reverse rounded-2xl bg-white p-5 sm:p-6">
+            <dt class="text-sm font-medium text-slate-500">гласных</dt>
+            <dd class="mb-1 font-['Unbounded',sans-serif] text-4xl font-semibold text-slate-900 sm:text-5xl">10</dd>
+          </div>
+          <div class="flex flex-col-reverse rounded-2xl bg-white p-5 sm:p-6">
+            <dt class="text-sm font-medium text-slate-500">согласная</dt>
+            <dd class="mb-1 font-['Unbounded',sans-serif] text-4xl font-semibold text-slate-900 sm:text-5xl">21</dd>
+          </div>
+          <div class="flex flex-col-reverse rounded-2xl bg-white p-5 sm:p-6">
+            <dt class="text-sm font-medium text-slate-500">знака</dt>
+            <dd class="mb-1 font-['Unbounded',sans-serif] text-4xl font-semibold text-slate-900 sm:text-5xl">2</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="py-14 sm:py-20" aria-labelledby="alphabet">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+        <h2 id="alphabet" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">Алфавит</h2>
+        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Буквы стоят по порядку, от А до Я. Цвет подсказывает, какая это буква.</p>
+        <p class="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-base font-semibold">
+          <span class="flex items-center gap-2"><span class="size-3 rounded-full bg-red-500"></span>гласные</span>
+          <span class="flex items-center gap-2"><span class="size-3 rounded-full bg-blue-500"></span>согласные</span>
+          <span class="flex items-center gap-2"><span class="size-3 rounded-full bg-slate-300"></span>знаки</span>
+        </p>
+        <ol class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-red-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-red-600">А<span class="text-2xl font-medium">а</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-red-600">А</span>рбуз</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Б<span class="text-2xl font-medium">б</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Б</span>анан</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">В<span class="text-2xl font-medium">в</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">В</span>олк</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Г<span class="text-2xl font-medium">г</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Г</span>риб</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Д<span class="text-2xl font-medium">д</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Д</span>ом</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-red-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-red-600">Е<span class="text-2xl font-medium">е</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-red-600">Е</span>нот</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-red-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-red-600">Ё<span class="text-2xl font-medium">ё</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-red-600">Ё</span>жик</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Ж<span class="text-2xl font-medium">ж</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Ж</span>ираф</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">З<span class="text-2xl font-medium">з</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">З</span>ебра</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-red-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-red-600">И<span class="text-2xl font-medium">и</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-red-600">И</span>ндюк</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Й<span class="text-2xl font-medium">й</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Й</span>огурт</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">К<span class="text-2xl font-medium">к</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">К</span>от</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Л<span class="text-2xl font-medium">л</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Л</span>ев</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">М<span class="text-2xl font-medium">м</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">М</span>яч</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Н<span class="text-2xl font-medium">н</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Н</span>осорог</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-red-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-red-600">О<span class="text-2xl font-medium">о</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-red-600">О</span>блако</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">П<span class="text-2xl font-medium">п</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">П</span>ингвин</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Р<span class="text-2xl font-medium">р</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Р</span>акета</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">С<span class="text-2xl font-medium">с</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">С</span>олнце</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Т<span class="text-2xl font-medium">т</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Т</span>игр</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-red-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-red-600">У<span class="text-2xl font-medium">у</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-red-600">У</span>тка</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Ф<span class="text-2xl font-medium">ф</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Ф</span>лаг</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Х<span class="text-2xl font-medium">х</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Х</span>леб</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Ц<span class="text-2xl font-medium">ц</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Ц</span>веток</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Ч<span class="text-2xl font-medium">ч</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Ч</span>асы</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Ш<span class="text-2xl font-medium">ш</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Ш</span>ар</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-blue-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-blue-600">Щ<span class="text-2xl font-medium">щ</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-blue-600">Щ</span>енок</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-slate-300 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-slate-400">Ъ<span class="text-2xl font-medium">ъ</span></p>
+            <p class="mt-3 text-lg font-semibold">Под<span class="text-slate-400">ъ</span>езд</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-red-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-red-600">Ы<span class="text-2xl font-medium">ы</span></p>
+            <p class="mt-3 text-lg font-semibold">С<span class="text-red-600">ы</span>р</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-slate-300 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-slate-400">Ь<span class="text-2xl font-medium">ь</span></p>
+            <p class="mt-3 text-lg font-semibold">Кон<span class="text-slate-400">ь</span></p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-red-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-red-600">Э<span class="text-2xl font-medium">э</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-red-600">Э</span>хо</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-red-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-red-600">Ю<span class="text-2xl font-medium">ю</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-red-600">Ю</span>ла</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 border-t-4 border-t-red-500 bg-white p-4 sm:p-5">
+            <p class="font-['Unbounded',sans-serif] text-4xl font-semibold text-red-600">Я<span class="text-2xl font-medium">я</span></p>
+            <p class="mt-3 text-lg font-semibold"><span class="text-red-600">Я</span>блоко</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="bg-violet-50 py-14 sm:py-20" aria-labelledby="sounds">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+        <h2 id="sounds" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">Гласные и согласные</h2>
+        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Все буквы делятся на три группы. Попробуй произнести буквы из каждой группы вслух.</p>
+        <div class="mt-10 grid gap-4 lg:grid-cols-3">
+          <article class="rounded-3xl bg-red-100 p-6 sm:p-8">
+            <h3 class="font-['Unbounded',sans-serif] text-xl font-semibold text-red-700">Гласные — 10</h3>
+            <p class="mt-3 text-lg leading-relaxed text-slate-700">Гласные можно петь: а-а-а, о-о-о, у-у-у. Воздух выходит свободно, ничего не мешает.</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-red-600">А</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-red-600">Е</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-red-600">Ё</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-red-600">И</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-red-600">О</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-red-600">У</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-red-600">Ы</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-red-600">Э</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-red-600">Ю</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-red-600">Я</span></div>
+          </article>
+          <article class="rounded-3xl bg-blue-100 p-6 sm:p-8">
+            <h3 class="font-['Unbounded',sans-serif] text-xl font-semibold text-blue-700">Согласные — 21</h3>
+            <p class="mt-3 text-lg leading-relaxed text-slate-700">Когда мы произносим согласные, воздуху мешают губы, зубы или язык. Их нельзя долго петь.</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Б</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">В</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Г</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Д</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Ж</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">З</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Й</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">К</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Л</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">М</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Н</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">П</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Р</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">С</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Т</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Ф</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Х</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Ц</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Ч</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Ш</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-blue-600">Щ</span></div>
+          </article>
+          <article class="rounded-3xl bg-slate-200 p-6 sm:p-8">
+            <h3 class="font-['Unbounded',sans-serif] text-xl font-semibold text-slate-700">Знаки — 2</h3>
+            <p class="mt-3 text-lg leading-relaxed text-slate-700">Твёрдый знак и мягкий знак не обозначают звуков. Они подсказывают, как правильно читать слово: «подъезд», «конь».</p>
+            <div class="mt-6 flex flex-wrap gap-2"><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-slate-500">Ъ</span><span class="grid size-11 place-items-center rounded-xl bg-white font-['Unbounded',sans-serif] text-lg font-semibold text-slate-500">Ь</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 py-14 sm:py-20" aria-labelledby="quiz">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+        <h2 id="quiz" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">Проверь себя</h2>
+        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Подумай над ответом, а потом нажми на кнопку и проверь, правильно ли ты ответил.</p>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <details class="group rounded-2xl border border-slate-200 bg-white p-5 open:border-slate-900 sm:p-6">
+            <summary class="flex cursor-pointer list-none flex-col gap-3 [&::-webkit-details-marker]:hidden">
+              <span class="text-sm font-semibold text-slate-400">Вопрос 1</span>
+              <span class="text-lg font-semibold leading-snug">Сколько букв в русском алфавите?</span>
+              <span class="mt-2 w-fit rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white group-open:hidden">Показать ответ</span>
+              <span class="mt-2 hidden w-fit rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700 group-open:block">Скрыть ответ</span>
+            </summary>
+            <p class="mt-4 rounded-xl bg-violet-100 p-4 text-base font-medium leading-relaxed">В русском алфавите 33 буквы.</p>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 bg-white p-5 open:border-slate-900 sm:p-6">
+            <summary class="flex cursor-pointer list-none flex-col gap-3 [&::-webkit-details-marker]:hidden">
+              <span class="text-sm font-semibold text-slate-400">Вопрос 2</span>
+              <span class="text-lg font-semibold leading-snug">Какие гласные буквы есть в слове «мама»?</span>
+              <span class="mt-2 w-fit rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white group-open:hidden">Показать ответ</span>
+              <span class="mt-2 hidden w-fit rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700 group-open:block">Скрыть ответ</span>
+            </summary>
+            <p class="mt-4 rounded-xl bg-violet-100 p-4 text-base font-medium leading-relaxed">Две буквы А: м-<b>а</b>-м-<b>а</b>.</p>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 bg-white p-5 open:border-slate-900 sm:p-6">
+            <summary class="flex cursor-pointer list-none flex-col gap-3 [&::-webkit-details-marker]:hidden">
+              <span class="text-sm font-semibold text-slate-400">Вопрос 3</span>
+              <span class="text-lg font-semibold leading-snug">С какой буквы начинается слово «яблоко»? Она гласная или согласная?</span>
+              <span class="mt-2 w-fit rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white group-open:hidden">Показать ответ</span>
+              <span class="mt-2 hidden w-fit rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700 group-open:block">Скрыть ответ</span>
+            </summary>
+            <p class="mt-4 rounded-xl bg-violet-100 p-4 text-base font-medium leading-relaxed">С буквы Я. Это гласная буква.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <nav aria-label="Соседние разделы" class="border-t border-slate-200 bg-white py-10">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 grid gap-3 sm:grid-cols-2">
+        <a href="index.html" class="rounded-2xl border border-slate-200 p-6 hover:border-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+          <span class="text-sm text-slate-500">Предыдущая страница</span>
+          <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Главная</span>
+        </a>
+        <a href="numbers.html" class="rounded-2xl bg-slate-900 p-6 text-white hover:bg-slate-700 sm:text-right focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+          <span class="text-sm text-white/70">Следующая страница</span>
+          <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Цифры</span>
+        </a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-col gap-4 py-10 sm:flex-row sm:items-center sm:justify-between">
+      <a href="index.html" class="flex w-fit items-center gap-3 rounded-lg font-['Unbounded',sans-serif] text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600">
+        <span class="grid size-9 shrink-0 grid-cols-2 gap-0.5" aria-hidden="true"><span class="rounded-md bg-violet-500"></span><span class="rounded-md bg-amber-400"></span><span class="rounded-md bg-emerald-500"></span><span class="rounded-md bg-sky-500"></span></span>
+        Умняша
+      </a>
+      <p class="text-sm text-slate-500">Образовательная страница для детей. Проект для Demo Day, 2026. Автор: Бахриддин.</p>
+    </div>
+  </footer>
+</body>
+</html>
