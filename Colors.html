@@ -18,7 +18,6 @@
 
 <body class="bg-white font-['Onest',sans-serif] text-slate-900 antialiased">
   <a href="#main" class="sr-only rounded-lg bg-slate-900 px-4 py-2 text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-4">Перейти к содержанию</a>
-  <a href="./index.html"></a>
 
   <header class="border-b border-slate-200 bg-white">
     <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-col gap-3 py-4 md:flex-row md:items-center md:justify-between">
@@ -70,7 +69,7 @@
     <section class="py-14 sm:py-20" aria-labelledby="rainbow">
       <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
         <h2 id="rainbow" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">Цвета радуги</h2>
-        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Чтобы запомнить порядок цветов, выучи фразу. Первая буква каждого слова — это первая буква цвета.</p>
+        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Чтобы запомнить порядок цветов, выучи фразу. Первая буква каждого слова — это первая буква цвета. Нажми на цвет, чтобы открыть его страницу.</p>
         <ol class="mt-8 grid grid-cols-4 gap-x-3 gap-y-5 sm:grid-cols-7">
           <li class="flex flex-col gap-2">
             <span class="h-3 rounded-full bg-red-500"></span>
@@ -102,40 +101,54 @@
           </li>
         </ol>
         <ul class="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <span class="block size-16 rounded-full bg-red-500"></span>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Красный</p>
-            <p class="mt-1 leading-relaxed text-slate-600">клубника, помидор, пожарная машина</p>
+          <li>
+            <a href="#cvet-krasnyj" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <span class="block size-16 rounded-full bg-red-500"></span>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Красный</span>
+              <span class="mt-1 block leading-relaxed text-slate-600">клубника, помидор, пожарная машина</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <span class="block size-16 rounded-full bg-orange-500"></span>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Оранжевый</p>
-            <p class="mt-1 leading-relaxed text-slate-600">апельсин, морковь, тыква</p>
+          <li>
+            <a href="#cvet-oranzhevyj" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <span class="block size-16 rounded-full bg-orange-500"></span>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Оранжевый</span>
+              <span class="mt-1 block leading-relaxed text-slate-600">апельсин, морковь, тыква</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <span class="block size-16 rounded-full bg-yellow-400"></span>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Жёлтый</p>
-            <p class="mt-1 leading-relaxed text-slate-600">лимон, подсолнух, цыплёнок</p>
+          <li>
+            <a href="#cvet-zheltyj" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <span class="block size-16 rounded-full bg-yellow-400"></span>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Жёлтый</span>
+              <span class="mt-1 block leading-relaxed text-slate-600">лимон, подсолнух, цыплёнок</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <span class="block size-16 rounded-full bg-green-500"></span>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Зелёный</p>
-            <p class="mt-1 leading-relaxed text-slate-600">огурец, трава, лягушка</p>
+          <li>
+            <a href="#cvet-zelenyj" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <span class="block size-16 rounded-full bg-green-500"></span>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Зелёный</span>
+              <span class="mt-1 block leading-relaxed text-slate-600">огурец, трава, лягушка</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <span class="block size-16 rounded-full bg-sky-400"></span>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Голубой</p>
-            <p class="mt-1 leading-relaxed text-slate-600">небо, незабудка, льдинка</p>
+          <li>
+            <a href="#cvet-goluboj" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <span class="block size-16 rounded-full bg-sky-400"></span>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Голубой</span>
+              <span class="mt-1 block leading-relaxed text-slate-600">небо, незабудка, льдинка</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <span class="block size-16 rounded-full bg-blue-600"></span>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Синий</p>
-            <p class="mt-1 leading-relaxed text-slate-600">черника, море, джинсы</p>
+          <li>
+            <a href="#cvet-sinij" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <span class="block size-16 rounded-full bg-blue-600"></span>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Синий</span>
+              <span class="mt-1 block leading-relaxed text-slate-600">черника, море, джинсы</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <span class="block size-16 rounded-full bg-violet-500"></span>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Фиолетовый</p>
-            <p class="mt-1 leading-relaxed text-slate-600">виноград, сирень, баклажан</p>
+          <li>
+            <a href="#cvet-fioletovyj" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <span class="block size-16 rounded-full bg-violet-500"></span>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Фиолетовый</span>
+              <span class="mt-1 block leading-relaxed text-slate-600">виноград, сирень, баклажан</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -188,55 +201,71 @@
     <section class="py-14 sm:py-20" aria-labelledby="shapes">
       <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
         <h2 id="shapes" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">Фигуры</h2>
-        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Посчитай углы у каждой фигуры и найди дома предметы такой же формы.</p>
+        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Посчитай углы у каждой фигуры и найди дома предметы такой же формы. Нажми на фигуру, чтобы открыть её страницу.</p>
         <ul class="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#f59e0b"><circle cx="50" cy="50" r="42"/></g></svg>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Круг</p>
-            <p class="mt-2 w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">Нет углов</p>
-            <p class="mt-3 leading-relaxed text-slate-600">Похоже на: колесо, тарелка, монета</p>
+          <li>
+            <a href="#figura-krug" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#f59e0b"><circle cx="50" cy="50" r="42"/></g></svg>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Круг</span>
+              <span class="mt-2 block w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">Нет углов</span>
+              <span class="mt-3 block leading-relaxed text-slate-600">Похоже на: колесо, тарелка, монета</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#8b5cf6"><ellipse cx="50" cy="50" rx="46" ry="30"/></g></svg>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Овал</p>
-            <p class="mt-2 w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">Нет углов</p>
-            <p class="mt-3 leading-relaxed text-slate-600">Похоже на: яйцо, зеркало, дыня</p>
+          <li>
+            <a href="#figura-oval" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#8b5cf6"><ellipse cx="50" cy="50" rx="46" ry="30"/></g></svg>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Овал</span>
+              <span class="mt-2 block w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">Нет углов</span>
+              <span class="mt-3 block leading-relaxed text-slate-600">Похоже на: яйцо, зеркало, дыня</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#f97316"><polygon points="50,8 94,88 6,88"/></g></svg>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Треугольник</p>
-            <p class="mt-2 w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">3 угла, 3 стороны</p>
-            <p class="mt-3 leading-relaxed text-slate-600">Похоже на: кусок пиццы, крыша дома</p>
+          <li>
+            <a href="#figura-treugolnik" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#f97316"><polygon points="50,8 94,88 6,88"/></g></svg>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Треугольник</span>
+              <span class="mt-2 block w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">3 угла, 3 стороны</span>
+              <span class="mt-3 block leading-relaxed text-slate-600">Похоже на: кусок пиццы, крыша дома</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#0ea5e9"><rect x="10" y="10" width="80" height="80" rx="3"/></g></svg>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Квадрат</p>
-            <p class="mt-2 w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">4 угла, все стороны равны</p>
-            <p class="mt-3 leading-relaxed text-slate-600">Похоже на: клетка в тетради, кубик</p>
+          <li>
+            <a href="#figura-kvadrat" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#0ea5e9"><rect x="10" y="10" width="80" height="80" rx="3"/></g></svg>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Квадрат</span>
+              <span class="mt-2 block w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">4 угла, все стороны равны</span>
+              <span class="mt-3 block leading-relaxed text-slate-600">Похоже на: клетка в тетради, кубик</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#10b981"><rect x="4" y="24" width="92" height="52" rx="3"/></g></svg>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Прямоугольник</p>
-            <p class="mt-2 w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">4 угла</p>
-            <p class="mt-3 leading-relaxed text-slate-600">Похоже на: дверь, книга, окно</p>
+          <li>
+            <a href="#figura-pryamougolnik" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#10b981"><rect x="4" y="24" width="92" height="52" rx="3"/></g></svg>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Прямоугольник</span>
+              <span class="mt-2 block w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">4 угла</span>
+              <span class="mt-3 block leading-relaxed text-slate-600">Похоже на: дверь, книга, окно</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#ef4444"><polygon points="50,4 92,50 50,96 8,50"/></g></svg>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Ромб</p>
-            <p class="mt-2 w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">4 угла, все стороны равны</p>
-            <p class="mt-3 leading-relaxed text-slate-600">Похоже на: воздушный змей</p>
+          <li>
+            <a href="#figura-romb" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#ef4444"><polygon points="50,4 92,50 50,96 8,50"/></g></svg>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Ромб</span>
+              <span class="mt-2 block w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">4 угла, все стороны равны</span>
+              <span class="mt-3 block leading-relaxed text-slate-600">Похоже на: воздушный змей</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#6366f1"><polygon points="28,22 72,22 96,80 4,80"/></g></svg>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Трапеция</p>
-            <p class="mt-2 w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">4 угла</p>
-            <p class="mt-3 leading-relaxed text-slate-600">Похоже на: абажур лампы, ведро сбоку</p>
+          <li>
+            <a href="#figura-trapeciya" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#6366f1"><polygon points="28,22 72,22 96,80 4,80"/></g></svg>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Трапеция</span>
+              <span class="mt-2 block w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">4 угла</span>
+              <span class="mt-3 block leading-relaxed text-slate-600">Похоже на: абажур лампы, ведро сбоку</span>
+            </a>
           </li>
-          <li class="rounded-2xl border border-slate-200 bg-white p-5">
-            <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#ec4899"><polygon points="50,6 95,39 78,92 22,92 5,39"/></g></svg>
-            <p class="mt-4 font-['Unbounded',sans-serif] text-xl font-semibold">Пятиугольник</p>
-            <p class="mt-2 w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">5 углов, 5 сторон</p>
-            <p class="mt-3 leading-relaxed text-slate-600">Похоже на: домик сбоку, кусочек мяча</p>
+          <li>
+            <a href="#figura-pyatiugolnik" class="block h-full rounded-2xl border border-slate-200 bg-white p-5 hover:border-slate-900">
+              <svg viewBox="0 0 100 100" class="size-20" aria-hidden="true"><g fill="#ec4899"><polygon points="50,6 95,39 78,92 22,92 5,39"/></g></svg>
+              <span class="mt-4 block font-['Unbounded',sans-serif] text-xl font-semibold">Пятиугольник</span>
+              <span class="mt-2 block w-fit rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-800">5 углов, 5 сторон</span>
+              <span class="mt-3 block leading-relaxed text-slate-600">Похоже на: домик сбоку, кусочек мяча</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -290,6 +319,549 @@
         </a>
       </div>
     </nav>
+
+    <!-- Страницы цветов и фигур: открываются по ссылке #cvet-... и #figura-... -->
+    <div id="cvet-krasnyj" role="dialog" aria-labelledby="cvet-krasnyj-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#rainbow" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все цвета</a>
+          <p class="text-sm font-semibold text-white/85">Цвет 1 из 7</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-slate-50 p-8 text-center sm:p-12">
+            <span class="mx-auto block size-40 rounded-full sm:size-56 bg-red-500"></span>
+            <h2 id="cvet-krasnyj-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Красный</h2>
+            <p class="mt-3 text-lg text-slate-600">1-й цвет радуги. В фразе это слово «<b class="text-red-600">Каждый</b>».</p>
+          </div>
+          <div>
+            <h3 class="font-['Unbounded',sans-serif] text-xl font-semibold">Такого цвета</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">клубника</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">помидор</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">пожарная машина</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Оттенки</h3>
+            <div class="mt-4 flex flex-wrap gap-6"><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-red-200"></span><span class="text-sm font-semibold">светлый</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-red-500"></span><span class="text-sm font-semibold">обычный</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-red-800"></span><span class="text-sm font-semibold">тёмный</span></span></div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Как получить этот цвет</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">Красный — основной цвет. Его нельзя получить, если смешать другие краски.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <span class="hidden sm:block"></span>
+          <a href="#cvet-oranzhevyj" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Оранжевый</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="cvet-oranzhevyj" role="dialog" aria-labelledby="cvet-oranzhevyj-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#rainbow" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все цвета</a>
+          <p class="text-sm font-semibold text-white/85">Цвет 2 из 7</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-slate-50 p-8 text-center sm:p-12">
+            <span class="mx-auto block size-40 rounded-full sm:size-56 bg-orange-500"></span>
+            <h2 id="cvet-oranzhevyj-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Оранжевый</h2>
+            <p class="mt-3 text-lg text-slate-600">2-й цвет радуги. В фразе это слово «<b class="text-orange-600">Охотник</b>».</p>
+          </div>
+          <div>
+            <h3 class="font-['Unbounded',sans-serif] text-xl font-semibold">Такого цвета</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">апельсин</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">морковь</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">тыква</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Оттенки</h3>
+            <div class="mt-4 flex flex-wrap gap-6"><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-orange-200"></span><span class="text-sm font-semibold">светлый</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-orange-500"></span><span class="text-sm font-semibold">обычный</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-orange-800"></span><span class="text-sm font-semibold">тёмный</span></span></div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Как получить этот цвет</h3>
+            <div class="mt-4 flex w-fit items-center gap-4 rounded-2xl bg-slate-50 p-4 sm:gap-6 sm:p-5">
+              <span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-red-500"></span><span class="text-sm font-semibold">Красный</span></span><span class="font-['Unbounded',sans-serif] text-2xl font-semibold text-slate-400">+</span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-yellow-400"></span><span class="text-sm font-semibold">Жёлтый</span></span><span class="font-['Unbounded',sans-serif] text-2xl font-semibold text-slate-400">=</span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-orange-500"></span><span class="text-sm font-semibold">Оранжевый</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#cvet-krasnyj" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Красный</span>
+          </a>
+          <a href="#cvet-zheltyj" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Жёлтый</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="cvet-zheltyj" role="dialog" aria-labelledby="cvet-zheltyj-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#rainbow" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все цвета</a>
+          <p class="text-sm font-semibold text-white/85">Цвет 3 из 7</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-slate-50 p-8 text-center sm:p-12">
+            <span class="mx-auto block size-40 rounded-full sm:size-56 bg-yellow-400"></span>
+            <h2 id="cvet-zheltyj-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Жёлтый</h2>
+            <p class="mt-3 text-lg text-slate-600">3-й цвет радуги. В фразе это слово «<b class="text-yellow-600">Желает</b>».</p>
+          </div>
+          <div>
+            <h3 class="font-['Unbounded',sans-serif] text-xl font-semibold">Такого цвета</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">лимон</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">подсолнух</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">цыплёнок</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Оттенки</h3>
+            <div class="mt-4 flex flex-wrap gap-6"><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-yellow-200"></span><span class="text-sm font-semibold">светлый</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-yellow-400"></span><span class="text-sm font-semibold">обычный</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-yellow-700"></span><span class="text-sm font-semibold">тёмный</span></span></div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Как получить этот цвет</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">Жёлтый — основной цвет. Его нельзя получить, если смешать другие краски.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#cvet-oranzhevyj" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Оранжевый</span>
+          </a>
+          <a href="#cvet-zelenyj" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Зелёный</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="cvet-zelenyj" role="dialog" aria-labelledby="cvet-zelenyj-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#rainbow" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все цвета</a>
+          <p class="text-sm font-semibold text-white/85">Цвет 4 из 7</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-slate-50 p-8 text-center sm:p-12">
+            <span class="mx-auto block size-40 rounded-full sm:size-56 bg-green-500"></span>
+            <h2 id="cvet-zelenyj-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Зелёный</h2>
+            <p class="mt-3 text-lg text-slate-600">4-й цвет радуги. В фразе это слово «<b class="text-green-600">Знать</b>».</p>
+          </div>
+          <div>
+            <h3 class="font-['Unbounded',sans-serif] text-xl font-semibold">Такого цвета</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">огурец</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">трава</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">лягушка</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Оттенки</h3>
+            <div class="mt-4 flex flex-wrap gap-6"><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-green-200"></span><span class="text-sm font-semibold">светлый</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-green-500"></span><span class="text-sm font-semibold">обычный</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-green-800"></span><span class="text-sm font-semibold">тёмный</span></span></div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Как получить этот цвет</h3>
+            <div class="mt-4 flex w-fit items-center gap-4 rounded-2xl bg-slate-50 p-4 sm:gap-6 sm:p-5">
+              <span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-yellow-400"></span><span class="text-sm font-semibold">Жёлтый</span></span><span class="font-['Unbounded',sans-serif] text-2xl font-semibold text-slate-400">+</span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-blue-600"></span><span class="text-sm font-semibold">Синий</span></span><span class="font-['Unbounded',sans-serif] text-2xl font-semibold text-slate-400">=</span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-green-500"></span><span class="text-sm font-semibold">Зелёный</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#cvet-zheltyj" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Жёлтый</span>
+          </a>
+          <a href="#cvet-goluboj" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Голубой</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="cvet-goluboj" role="dialog" aria-labelledby="cvet-goluboj-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#rainbow" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все цвета</a>
+          <p class="text-sm font-semibold text-white/85">Цвет 5 из 7</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-slate-50 p-8 text-center sm:p-12">
+            <span class="mx-auto block size-40 rounded-full sm:size-56 bg-sky-400"></span>
+            <h2 id="cvet-goluboj-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Голубой</h2>
+            <p class="mt-3 text-lg text-slate-600">5-й цвет радуги. В фразе это слово «<b class="text-sky-600">Где</b>».</p>
+          </div>
+          <div>
+            <h3 class="font-['Unbounded',sans-serif] text-xl font-semibold">Такого цвета</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">небо</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">незабудка</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">льдинка</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Оттенки</h3>
+            <div class="mt-4 flex flex-wrap gap-6"><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-sky-200"></span><span class="text-sm font-semibold">светлый</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-sky-400"></span><span class="text-sm font-semibold">обычный</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-sky-700"></span><span class="text-sm font-semibold">тёмный</span></span></div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Как получить этот цвет</h3>
+            <div class="mt-4 flex w-fit items-center gap-4 rounded-2xl bg-slate-50 p-4 sm:gap-6 sm:p-5">
+              <span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-blue-600"></span><span class="text-sm font-semibold">Синий</span></span><span class="font-['Unbounded',sans-serif] text-2xl font-semibold text-slate-400">+</span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-white border border-slate-300"></span><span class="text-sm font-semibold">Белый</span></span><span class="font-['Unbounded',sans-serif] text-2xl font-semibold text-slate-400">=</span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-sky-400"></span><span class="text-sm font-semibold">Голубой</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#cvet-zelenyj" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Зелёный</span>
+          </a>
+          <a href="#cvet-sinij" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Синий</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="cvet-sinij" role="dialog" aria-labelledby="cvet-sinij-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#rainbow" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все цвета</a>
+          <p class="text-sm font-semibold text-white/85">Цвет 6 из 7</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-slate-50 p-8 text-center sm:p-12">
+            <span class="mx-auto block size-40 rounded-full sm:size-56 bg-blue-600"></span>
+            <h2 id="cvet-sinij-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Синий</h2>
+            <p class="mt-3 text-lg text-slate-600">6-й цвет радуги. В фразе это слово «<b class="text-blue-700">Сидит</b>».</p>
+          </div>
+          <div>
+            <h3 class="font-['Unbounded',sans-serif] text-xl font-semibold">Такого цвета</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">черника</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">море</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">джинсы</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Оттенки</h3>
+            <div class="mt-4 flex flex-wrap gap-6"><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-blue-200"></span><span class="text-sm font-semibold">светлый</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-blue-600"></span><span class="text-sm font-semibold">обычный</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-blue-900"></span><span class="text-sm font-semibold">тёмный</span></span></div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Как получить этот цвет</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">Синий — основной цвет. Его нельзя получить, если смешать другие краски.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#cvet-goluboj" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Голубой</span>
+          </a>
+          <a href="#cvet-fioletovyj" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Фиолетовый</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="cvet-fioletovyj" role="dialog" aria-labelledby="cvet-fioletovyj-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#rainbow" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все цвета</a>
+          <p class="text-sm font-semibold text-white/85">Цвет 7 из 7</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-slate-50 p-8 text-center sm:p-12">
+            <span class="mx-auto block size-40 rounded-full sm:size-56 bg-violet-500"></span>
+            <h2 id="cvet-fioletovyj-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Фиолетовый</h2>
+            <p class="mt-3 text-lg text-slate-600">7-й цвет радуги. В фразе это слово «<b class="text-violet-600">Фазан</b>».</p>
+          </div>
+          <div>
+            <h3 class="font-['Unbounded',sans-serif] text-xl font-semibold">Такого цвета</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">виноград</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">сирень</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">баклажан</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Оттенки</h3>
+            <div class="mt-4 flex flex-wrap gap-6"><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-violet-200"></span><span class="text-sm font-semibold">светлый</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-violet-500"></span><span class="text-sm font-semibold">обычный</span></span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-violet-800"></span><span class="text-sm font-semibold">тёмный</span></span></div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Как получить этот цвет</h3>
+            <div class="mt-4 flex w-fit items-center gap-4 rounded-2xl bg-slate-50 p-4 sm:gap-6 sm:p-5">
+              <span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-red-500"></span><span class="text-sm font-semibold">Красный</span></span><span class="font-['Unbounded',sans-serif] text-2xl font-semibold text-slate-400">+</span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-blue-600"></span><span class="text-sm font-semibold">Синий</span></span><span class="font-['Unbounded',sans-serif] text-2xl font-semibold text-slate-400">=</span><span class="flex flex-col items-center gap-2"><span class="size-14 rounded-full bg-violet-500"></span><span class="text-sm font-semibold">Фиолетовый</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#cvet-sinij" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущий цвет</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Синий</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="figura-krug" role="dialog" aria-labelledby="figura-krug-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#shapes" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все фигуры</a>
+          <p class="text-sm font-semibold text-white/85">Фигура 1 из 8</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-emerald-50 p-8 text-center sm:p-12">
+            <svg viewBox="0 0 100 100" class="mx-auto size-40 sm:size-56" aria-hidden="true"><g fill="#f59e0b"><circle cx="50" cy="50" r="42"/></g></svg>
+            <h2 id="figura-krug-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Круг</h2>
+          </div>
+          <div>
+            <div class="grid max-w-md grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">углов</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">0</p></div>
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">сторон</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">0</p></div>
+            </div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">На что похоже</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">колесо</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">тарелка</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">монета</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Запомни</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">У круга нет углов. Он легко катится, поэтому колёса делают круглыми.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <span class="hidden sm:block"></span>
+          <a href="#figura-oval" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Овал</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="figura-oval" role="dialog" aria-labelledby="figura-oval-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#shapes" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все фигуры</a>
+          <p class="text-sm font-semibold text-white/85">Фигура 2 из 8</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-emerald-50 p-8 text-center sm:p-12">
+            <svg viewBox="0 0 100 100" class="mx-auto size-40 sm:size-56" aria-hidden="true"><g fill="#8b5cf6"><ellipse cx="50" cy="50" rx="46" ry="30"/></g></svg>
+            <h2 id="figura-oval-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Овал</h2>
+          </div>
+          <div>
+            <div class="grid max-w-md grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">углов</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">0</p></div>
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">сторон</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">0</p></div>
+            </div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">На что похоже</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">яйцо</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">зеркало</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">дыня</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Запомни</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">Овал похож на вытянутый круг. Углов у него тоже нет.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#figura-krug" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Круг</span>
+          </a>
+          <a href="#figura-treugolnik" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Треугольник</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="figura-treugolnik" role="dialog" aria-labelledby="figura-treugolnik-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#shapes" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все фигуры</a>
+          <p class="text-sm font-semibold text-white/85">Фигура 3 из 8</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-emerald-50 p-8 text-center sm:p-12">
+            <svg viewBox="0 0 100 100" class="mx-auto size-40 sm:size-56" aria-hidden="true"><g fill="#f97316"><polygon points="50,8 94,88 6,88"/></g></svg>
+            <h2 id="figura-treugolnik-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Треугольник</h2>
+          </div>
+          <div>
+            <div class="grid max-w-md grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">углов</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">3</p></div>
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">сторон</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">3</p></div>
+            </div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">На что похоже</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">кусок пиццы</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">крыша дома</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Запомни</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">У треугольника три угла и три стороны. Меньше углов не бывает ни у одной фигуры из прямых линий.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#figura-oval" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Овал</span>
+          </a>
+          <a href="#figura-kvadrat" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Квадрат</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="figura-kvadrat" role="dialog" aria-labelledby="figura-kvadrat-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#shapes" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все фигуры</a>
+          <p class="text-sm font-semibold text-white/85">Фигура 4 из 8</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-emerald-50 p-8 text-center sm:p-12">
+            <svg viewBox="0 0 100 100" class="mx-auto size-40 sm:size-56" aria-hidden="true"><g fill="#0ea5e9"><rect x="10" y="10" width="80" height="80" rx="3"/></g></svg>
+            <h2 id="figura-kvadrat-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Квадрат</h2>
+          </div>
+          <div>
+            <div class="grid max-w-md grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">углов</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">4</p></div>
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">сторон</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">4</p></div>
+            </div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">На что похоже</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">клетка в тетради</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">кубик</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Запомни</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">У квадрата все четыре стороны одинаковые, а все углы прямые.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#figura-treugolnik" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Треугольник</span>
+          </a>
+          <a href="#figura-pryamougolnik" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Прямоугольник</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="figura-pryamougolnik" role="dialog" aria-labelledby="figura-pryamougolnik-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#shapes" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все фигуры</a>
+          <p class="text-sm font-semibold text-white/85">Фигура 5 из 8</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-emerald-50 p-8 text-center sm:p-12">
+            <svg viewBox="0 0 100 100" class="mx-auto size-40 sm:size-56" aria-hidden="true"><g fill="#10b981"><rect x="4" y="24" width="92" height="52" rx="3"/></g></svg>
+            <h2 id="figura-pryamougolnik-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Прямоугольник</h2>
+          </div>
+          <div>
+            <div class="grid max-w-md grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">углов</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">4</p></div>
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">сторон</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">4</p></div>
+            </div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">На что похоже</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">дверь</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">книга</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">окно</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Запомни</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">У прямоугольника противоположные стороны равны, а все углы прямые. Квадрат — это тоже прямоугольник.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#figura-kvadrat" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Квадрат</span>
+          </a>
+          <a href="#figura-romb" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Ромб</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="figura-romb" role="dialog" aria-labelledby="figura-romb-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#shapes" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все фигуры</a>
+          <p class="text-sm font-semibold text-white/85">Фигура 6 из 8</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-emerald-50 p-8 text-center sm:p-12">
+            <svg viewBox="0 0 100 100" class="mx-auto size-40 sm:size-56" aria-hidden="true"><g fill="#ef4444"><polygon points="50,4 92,50 50,96 8,50"/></g></svg>
+            <h2 id="figura-romb-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Ромб</h2>
+          </div>
+          <div>
+            <div class="grid max-w-md grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">углов</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">4</p></div>
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">сторон</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">4</p></div>
+            </div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">На что похоже</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">воздушный змей</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Запомни</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">У ромба все стороны равны, как у квадрата, но углы не прямые: он будто наклонён.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#figura-pryamougolnik" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Прямоугольник</span>
+          </a>
+          <a href="#figura-trapeciya" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Трапеция</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="figura-trapeciya" role="dialog" aria-labelledby="figura-trapeciya-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#shapes" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все фигуры</a>
+          <p class="text-sm font-semibold text-white/85">Фигура 7 из 8</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-emerald-50 p-8 text-center sm:p-12">
+            <svg viewBox="0 0 100 100" class="mx-auto size-40 sm:size-56" aria-hidden="true"><g fill="#6366f1"><polygon points="28,22 72,22 96,80 4,80"/></g></svg>
+            <h2 id="figura-trapeciya-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Трапеция</h2>
+          </div>
+          <div>
+            <div class="grid max-w-md grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">углов</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">4</p></div>
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">сторон</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">4</p></div>
+            </div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">На что похоже</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">абажур лампы</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">ведро сбоку</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Запомни</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">У трапеции верхняя и нижняя стороны параллельны, но верхняя короче нижней.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#figura-romb" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Ромб</span>
+          </a>
+          <a href="#figura-pyatiugolnik" class="rounded-2xl bg-slate-900 p-5 text-white hover:bg-slate-700 sm:text-right">
+            <span class="text-sm text-white/70">Следующая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Пятиугольник</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="figura-pyatiugolnik" role="dialog" aria-labelledby="figura-pyatiugolnik-title" class="fixed inset-0 z-50 hidden overflow-y-auto overscroll-contain bg-white target:block">
+      <div class="bg-emerald-500 text-white">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-wrap items-center justify-between gap-3 py-4">
+          <a href="#shapes" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 ring-1 ring-black/5 hover:bg-slate-100">Назад: все фигуры</a>
+          <p class="text-sm font-semibold text-white/85">Фигура 8 из 8</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 py-10 sm:py-14">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div class="rounded-3xl bg-emerald-50 p-8 text-center sm:p-12">
+            <svg viewBox="0 0 100 100" class="mx-auto size-40 sm:size-56" aria-hidden="true"><g fill="#ec4899"><polygon points="50,6 95,39 78,92 22,92 5,39"/></g></svg>
+            <h2 id="figura-pyatiugolnik-title" class="mt-8 font-['Unbounded',sans-serif] text-3xl font-semibold">Пятиугольник</h2>
+          </div>
+          <div>
+            <div class="grid max-w-md grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">углов</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">5</p></div>
+              <div class="rounded-2xl bg-emerald-100 p-5"><p class="text-sm font-medium text-emerald-900">сторон</p><p class="mt-1 font-['Unbounded',sans-serif] text-4xl font-semibold">5</p></div>
+            </div>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">На что похоже</h3>
+            <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">домик сбоку</li><li class="rounded-full bg-slate-100 px-4 py-2 text-lg font-semibold">кусочек мяча</li></ul>
+            <h3 class="mt-10 font-['Unbounded',sans-serif] text-xl font-semibold">Запомни</h3>
+            <p class="mt-3 max-w-xl text-lg leading-relaxed text-slate-600">У пятиугольника пять углов и пять сторон. Квадрат с треугольником сверху — это домик-пятиугольник.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-3 border-t border-slate-200 pt-8 sm:grid-cols-2">
+          <a href="#figura-trapeciya" class="rounded-2xl border border-slate-200 p-5 hover:border-slate-900">
+            <span class="text-sm text-slate-500">Предыдущая фигура</span>
+            <span class="mt-1 block font-['Unbounded',sans-serif] text-xl font-semibold">Трапеция</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="border-t border-slate-200 bg-white">
