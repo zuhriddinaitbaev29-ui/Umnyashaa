@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Умняша — образовательная страница для детей</title>
+  <meta name="description" content="Образовательная страница для детей 5–8 лет: буквы, цифры, цвета и фигуры, мир вокруг.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='15' height='15' rx='4' fill='%238b5cf6'/%3E%3Crect x='17' width='15' height='15' rx='4' fill='%23fbbf24'/%3E%3Crect y='17' width='15' height='15' rx='4' fill='%2310b981'/%3E%3Crect x='17' y='17' width='15' height='15' rx='4' fill='%230ea5e9'/%3E%3C/svg%3E">
+
+  <!-- Шрифты: Unbounded для заголовков, Onest для текста -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white font-['Onest',sans-serif] text-slate-900 antialiased">
+  <a href="#main" class="sr-only rounded-lg bg-slate-900 px-4 py-2 text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-4">Перейти к содержанию</a>
+
+  <header class="border-b border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-col gap-3 py-4 md:flex-row md:items-center md:justify-between">
+      <a href="index.html" class="flex w-fit items-center gap-3 rounded-lg font-['Unbounded',sans-serif] text-lg font-semibold">
+        <span class="grid size-9 shrink-0 grid-cols-2 gap-0.5" aria-hidden="true"><span class="rounded-md bg-violet-500"></span><span class="rounded-md bg-amber-400"></span><span class="rounded-md bg-emerald-500"></span><span class="rounded-md bg-sky-500"></span></span>
+        Умняша
+      </a>
+      <nav aria-label="Разделы сайта">
+        <ul class="-mx-1 flex flex-wrap gap-1">
+          <li><a href="index.html" aria-current="page" class="block rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Главная</a></li>
+          <li><a href="letters.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900">Буквы</a></li>
+          <li><a href="numbers.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900">Цифры</a></li>
+          <li><a href="colors.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900">Цвета и фигуры</a></li>
+          <li><a href="world.html" class="block rounded-full px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900">Мир вокруг</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="py-14 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <h1 class="font-['Unbounded',sans-serif] text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">Учимся легко и&nbsp;с&nbsp;интересом</h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl">Образовательная страница для детей 5–8 лет. Четыре красочных раздела: буквы, цифры, цвета и фигуры, мир вокруг.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="letters.html" class="rounded-full bg-slate-900 px-7 py-4 text-center text-base font-semibold text-white hover:bg-slate-700">Начать с букв</a>
+            <a href="#sections" class="rounded-full px-7 py-4 text-center text-base font-semibold text-slate-900 ring-1 ring-slate-300 hover:ring-slate-900">Все разделы</a>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <a href="letters.html" class="flex min-h-[150px] flex-col justify-between rounded-3xl bg-violet-100 p-5 hover:ring-2 hover:ring-slate-900 sm:min-h-[190px] sm:p-6">
+            <span class="font-['Unbounded',sans-serif] text-4xl font-semibold sm:text-5xl"><span class="text-red-600">А</span><span class="text-blue-600">Б</span><span class="text-blue-600">В</span></span>
+            <span class="text-base font-semibold">Буквы</span>
+          </a>
+          <a href="numbers.html" class="flex min-h-[150px] flex-col justify-between rounded-3xl bg-amber-300 p-5 hover:ring-2 hover:ring-slate-900 sm:min-h-[190px] sm:p-6">
+            <span class="font-['Unbounded',sans-serif] text-4xl font-semibold sm:text-5xl">1 2 3</span>
+            <span class="text-base font-semibold">Цифры</span>
+          </a>
+          <a href="colors.html" class="flex min-h-[150px] flex-col justify-between rounded-3xl bg-emerald-500 p-5 text-white hover:ring-2 hover:ring-slate-900 sm:min-h-[190px] sm:p-6">
+            <span class="flex items-end gap-2" aria-hidden="true">
+              <span class="size-9 rounded-full bg-white sm:size-11"></span>
+              <span class="size-9 bg-yellow-300 sm:size-11"></span>
+              <svg viewBox="0 0 100 100" class="size-9 sm:size-11"><polygon points="50,6 96,94 4,94" fill="#ede9fe"/></svg>
+            </span>
+            <span class="text-base font-semibold">Цвета и фигуры</span>
+          </a>
+          <a href="world.html" class="flex min-h-[150px] flex-col justify-between rounded-3xl bg-sky-500 p-5 text-white hover:ring-2 hover:ring-slate-900 sm:min-h-[190px] sm:p-6">
+            <span class="flex items-center gap-2" aria-hidden="true">
+              <span class="size-10 rounded-full bg-amber-300 sm:size-12"></span>
+              <span class="size-4 rounded-full bg-blue-700"></span>
+              <span class="size-6 rounded-full bg-orange-300"></span>
+              <span class="size-3 rounded-full bg-orange-600"></span>
+            </span>
+            <span class="text-base font-semibold">Мир вокруг</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 py-14 sm:py-20" aria-labelledby="sections">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+        <h2 id="sections" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">Разделы</h2>
+        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Каждый раздел — отдельная страница своего цвета. Их можно проходить по порядку или выбрать любой.</p>
+        <div class="mt-10 grid gap-4 md:grid-cols-2">
+          <a href="letters.html" class="flex flex-col rounded-3xl p-6 hover:ring-2 hover:ring-slate-900 sm:p-8 bg-violet-100">
+            <h3 class="font-['Unbounded',sans-serif] text-2xl font-semibold sm:text-3xl">Буквы</h3>
+            <p class="mt-2 text-lg text-slate-700">Весь русский алфавит с подсказками.</p>
+            <ul class="mt-6 space-y-2 text-base font-medium">
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>33 буквы, у каждой своя страница</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Гласные, согласные и знаки</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>3 вопроса для проверки</li>
+            </ul>
+            <span class="mt-8 w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900">Открыть раздел</span>
+          </a>
+          <a href="numbers.html" class="flex flex-col rounded-3xl p-6 hover:ring-2 hover:ring-slate-900 sm:p-8 bg-amber-300">
+            <h3 class="font-['Unbounded',sans-serif] text-2xl font-semibold sm:text-3xl">Цифры</h3>
+            <p class="mt-2 text-lg text-slate-700">Считаем, сравниваем и решаем примеры.</p>
+            <ul class="mt-6 space-y-2 text-base font-medium">
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Счёт от 1 до 10</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Больше, меньше, равно</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Сложение и вычитание</li>
+            </ul>
+            <span class="mt-8 w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900">Открыть раздел</span>
+          </a>
+          <a href="colors.html" class="flex flex-col rounded-3xl p-6 hover:ring-2 hover:ring-slate-900 sm:p-8 bg-emerald-500 text-white">
+            <h3 class="font-['Unbounded',sans-serif] text-2xl font-semibold sm:text-3xl">Цвета и фигуры</h3>
+            <p class="mt-2 text-lg text-white/90">Радуга, краски и геометрия.</p>
+            <ul class="mt-6 space-y-2 text-base font-medium">
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>7 цветов радуги</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Смешивание красок</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>8 фигур и их углы</li>
+            </ul>
+            <span class="mt-8 w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900">Открыть раздел</span>
+          </a>
+          <a href="world.html" class="flex flex-col rounded-3xl p-6 hover:ring-2 hover:ring-slate-900 sm:p-8 bg-sky-500 text-white">
+            <h3 class="font-['Unbounded',sans-serif] text-2xl font-semibold sm:text-3xl">Мир вокруг</h3>
+            <p class="mt-2 text-lg text-white/90">Природа и космос рядом с нами.</p>
+            <ul class="mt-6 space-y-2 text-base font-medium">
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Кто как говорит</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>Времена года и месяцы</li>
+              <li class="flex items-center gap-3"><span class="size-2 shrink-0 rounded-full bg-current"></span>8 планет Солнечной системы</li>
+            </ul>
+            <span class="mt-8 w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900">Открыть раздел</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 sm:py-20" aria-labelledby="how">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+        <h2 id="how" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">Как заниматься</h2>
+        <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">Три простых шага, чтобы занятие было полезным.</p>
+        <ol class="mt-10 grid gap-4 md:grid-cols-3">
+          <li class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+            <span class="grid size-12 place-items-center rounded-full bg-slate-900 font-['Unbounded',sans-serif] text-lg font-semibold text-white">1</span>
+            <h3 class="mt-6 font-['Unbounded',sans-serif] text-xl font-semibold">Выбери раздел</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">Начни с того, что интересно: букв, цифр, цветов или мира вокруг.</p>
+          </li>
+          <li class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+            <span class="grid size-12 place-items-center rounded-full bg-slate-900 font-['Unbounded',sans-serif] text-lg font-semibold text-white">2</span>
+            <h3 class="mt-6 font-['Unbounded',sans-serif] text-xl font-semibold">Читай вместе со взрослым</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">Нажимай на карточки: у каждой буквы, цифры, цвета и фигуры есть своя страница.</p>
+          </li>
+          <li class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+            <span class="grid size-12 place-items-center rounded-full bg-slate-900 font-['Unbounded',sans-serif] text-lg font-semibold text-white">3</span>
+            <h3 class="mt-6 font-['Unbounded',sans-serif] text-xl font-semibold">Проверь себя</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">В конце каждого раздела есть вопросы. Ответ можно открыть кнопкой.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 py-14 sm:py-20" aria-labelledby="about">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+        <h2 id="about" class="font-['Unbounded',sans-serif] text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">О проекте</h2>
+        <div class="mt-10 grid gap-8 md:grid-cols-3">
+          <div class="border-t-4 border-slate-900 pt-5">
+            <h3 class="font-['Unbounded',sans-serif] text-lg font-semibold">Цель</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">Создание понятной детям страницы с помощью красочных разделов.</p>
+          </div>
+          <div class="border-t-4 border-slate-900 pt-5">
+            <h3 class="font-['Unbounded',sans-serif] text-lg font-semibold">Для кого</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">Дети 5–8 лет, которые учатся читать и считать, и их родители.</p>
+          </div>
+          <div class="border-t-4 border-slate-900 pt-5">
+            <h3 class="font-['Unbounded',sans-serif] text-lg font-semibold">Как сделано</h3>
+            <p class="mt-2 text-lg leading-relaxed text-slate-600">Пять страниц на HTML и Tailwind CSS, без JavaScript. Переходы между страницами, буквами и цифрами работают через обычные ссылки &lt;a href&gt;.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10 flex flex-col gap-4 py-10 sm:flex-row sm:items-center sm:justify-between">
+      <a href="index.html" class="flex w-fit items-center gap-3 rounded-lg font-['Unbounded',sans-serif] text-base font-semibold">
+        <span class="grid size-9 shrink-0 grid-cols-2 gap-0.5" aria-hidden="true"><span class="rounded-md bg-violet-500"></span><span class="rounded-md bg-amber-400"></span><span class="rounded-md bg-emerald-500"></span><span class="rounded-md bg-sky-500"></span></span>
+        Умняша
+      </a>
+      <p class="text-sm text-slate-500">Образовательная страница для детей. Проект для Demo Day, 2026. Автор: Бахриддин.</p>
+    </div>
+  </footer>
+</body>
+</html>
